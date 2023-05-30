@@ -1,0 +1,53 @@
+.phone {
+    &__label {
+        span {
+            font-size: 0.75em;
+            color: $color_white;
+        }
+    }
+
+    &__link {
+        margin-top: 0.125em;
+
+        a {
+            color: $color_white;
+            font-size: 1.25em;
+            font-weight: 600;
+            text-decoration: none;
+
+        }
+    }
+
+}
+
+.header {
+
+    @media (max-width: 767px) {
+        .phone {
+            margin-top: 1.75em;
+
+            .phone__label {
+                span {
+                    color: $main_color;
+                }
+            }
+
+            .phone__link {
+                a {
+                    color: $main_color;
+                }
+            }
+        }
+
+    }
+
+    @media (min-width: 768px) {
+        .phone {
+            .phone__label {
+
+                text-align: right;
+
+            }
+        }
+    }
+}

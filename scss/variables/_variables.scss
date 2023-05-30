@@ -1,0 +1,70 @@
+/* Global variables */
+/* ======================================================================== */
+$main_font_family: "Montserrat";
+$second_font_family: "Unbounded";
+$icon_font_family: "icon";
+
+$main_line_height: 1.2;
+$main_font_size: 1em;
+
+$container_width: 100.875em;
+
+// Color collection for elements
+$main_color: #26331C;
+$color_primary: #739596;
+
+$color_success: #87C159;
+$color_info: #6785FF;
+$color_danger: #FF2334;
+$color_warning: #FF5C00;
+
+$color_white: #ffffff;
+$color_black: #000000;
+$color_yellow: #E9B80C;
+$color_green: #058240;
+
+/* Grid */
+/* ======================================================================== */
+$grid_padding: 1.25em;
+/* 20/16 */
+
+/* Form */
+/* ======================================================================== */
+// Input variables
+
+// Input color
+$input_color: $main_color;
+$input_bg_color: #fff;
+$input_border_color: #ddd;
+$input_placeholder_color: #ddd;
+
+// Input hover color
+$input_hover_color: $main_color;
+$input_hover_bg_color: $input_bg_color;
+$input_hover_border_color: $input_border_color;
+$input_hover_placeholder_color: $input_placeholder_color;
+
+// Input focus color
+$input_focus_color: $main_color;
+$input_focus_bg_color: $input_bg_color;
+$input_focus_border_color: $input_border_color;
+$input_focus_placeholder_color: $input_placeholder_color;
+
+// Input disabled color
+$input_disabled_color: #fff;
+$input_disabled_bg_color: #ccc;
+$input_disabled_border_color: #ccc;
+$input_disabled_placeholder_color: #fff;
+
+// Input error color
+$input_error_color: red;
+$input_error_bg_color: $input_bg_color;
+$input_error_border_color: red;
+// $input_error_placeholder_color: red;
+
+// Button variables
+$btn_default_bg_color: #ddd;
+$btn_default_text_color: $main_color;
+$btn_contrast_text_color: $color_white;
+$btn_default_bg_color_hover: darken($btn_default_bg_color, 7%);
+$btn_default_bg_color_active: darken($btn_default_bg_color, 10%);

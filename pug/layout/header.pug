@@ -1,0 +1,111 @@
+header.header
+    .header__row
+
+
+
+        .header__top
+            nav.navbar#navbar
+                ul.menu
+                    li.menu-item
+                        a(href="#") Каталог
+
+                    li.menu-item.current-menu-item
+                        a(href="#") Акции
+
+                    each item in ['Оплата', 'Доставка', 'Возврат', 'О компании', 'Блог', 'Контакты' ]
+                        li.menu-item
+                            a(href="#")=item
+
+            .messenger
+                .messenger__label
+                    span Задайте вопрос, мы онлайн
+                .messenger__list
+                    .messenger__item
+                        a.messenger__link(href="https://wapp.click/7391205408" target="_blank")
+                            i.icon_telegram
+                    .messenger__item
+                        a.messenger__link(href="https://wa.me/+" target="_blank")
+                            i.icon_whatsapp
+                    .messenger__item
+                        a.messenger__link(href="viber://chat?number=%2B73912054081" target="_blank")
+                            i.icon_viber
+
+            .phone
+                .phone__label
+                    span Будние дни с 9:00-18:00
+                .phone__link
+                    a(href="tel:+375 29 630 91 98") +375 29 630 91 98
+
+
+            .callback
+                a.callback__link(href="#") Заказать звонок
+
+
+    .header__row
+
+        .header__bottom
+            .header__toggle.mobile
+
+
+            .logo
+                a.logo__img.img(href="#")
+                    img(src="/img/logo.svg", alt="alt")
+                .logo__desc.desktop
+                    span Интернет-магазин оборудования для животноводства и фермерства
+
+
+            .catalogue.desktop
+                .catalogue__btn
+                    .catalogue__toggle
+                    span Каталог
+
+                //- .catalogue__list
+                //- 
+                //-     ul.catalogue__menu
+                //-         li.catalogue__item.catalogue__item_has-children
+                //-             a(href="#") Доильные аппараты и комплектующие
+                //-             ul.catalogue__submenu
+                //-                 li.catalogue__item
+                //-                     a(href="#") Доильные аппараты для коров
+                //-                 li.catalogue__item
+                //-                     a(href="#") Доильные аппараты для коз и овец
+                //-                 li.catalogue__item
+                //-                     a(href="#") Комплектующие к доильным аппаратам
+                //- 
+                //- 
+                //-         li.catalogue__item
+                //-             a(href="#") Самоходная техника
+                //-         li.catalogue__item
+                //-             a(href="#") Навесное оборудование
+                //-         li.catalogue__item
+                //-             a(href="#") Маслобойки
+                //-         li.catalogue__item
+                //-             a(href="#") Промывка доильного оборудования
+
+
+
+            .basket
+                a.basket__link(href="#")
+                    i.icon_basket
+                    .basket__count
+                        span 1
+
+            .search
+                .search-form__inner
+                    form.search-form
+
+                        input.search-form__input(type="text" placeholder="Поиск по товарам" value="" name="s" autocomplete="off")
+                        input(type="hidden" value="post" name="post_type")
+
+                        button.search-btn
+                            i.icon_loop
+                            span Найти
+
+                        .search-loop.desktop
+                            i.icon_loop
+
+                        .search-reset
+                            i.icon_close
+
+
+

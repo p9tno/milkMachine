@@ -1,0 +1,105 @@
+@font-face {
+  font-family: 'icon';
+  src:  url('fonts/icon.eot?xgbhin');
+  src:  url('fonts/icon.eot?xgbhin#iefix') format('embedded-opentype'),
+    url('fonts/icon.ttf?xgbhin') format('truetype'),
+    url('fonts/icon.woff?xgbhin') format('woff'),
+    url('fonts/icon.svg?xgbhin#icon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon_"], [class*=" icon_"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon_close:before {
+  content: "\e918";
+}
+.icon_burger:before {
+  content: "\e919";
+}
+.icon_arrow_bottom:before {
+  content: "\e900";
+}
+.icon_arrow_top:before {
+  content: "\e901";
+}
+.icon_arrow_lefr_sm:before {
+  content: "\e902";
+}
+.icon_arrow_right_sm:before {
+  content: "\e903";
+}
+.icon_arrow_left:before {
+  content: "\e904";
+}
+.icon_arrow_right:before {
+  content: "\e905";
+}
+.icon_basket:before {
+  content: "\e906";
+}
+.icon_location:before {
+  content: "\e907";
+}
+.icon_delete:before {
+  content: "\e908";
+}
+.icon_phone:before {
+  content: "\e909";
+}
+.icon_mark:before {
+  content: "\e90a";
+}
+.icon_clock:before {
+  content: "\e90b";
+}
+.icon_mail:before {
+  content: "\e90c";
+}
+.icon_car:before {
+  content: "\e90d";
+}
+.icon_loop:before {
+  content: "\e90e";
+}
+.icon_percentage:before {
+  content: "\e90f";
+}
+.icon_question:before {
+  content: "\e910";
+}
+.icon_instagram:before {
+  content: "\e911";
+}
+.icon_facebook:before {
+  content: "\e912";
+}
+.icon_vk:before {
+  content: "\e913";
+}
+.icon_telegram:before {
+  content: "\e914";
+}
+.icon_whatsapp:before {
+  content: "\e915";
+}
+.icon_viber:before {
+  content: "\e916";
+}
+.icon_youtube:before {
+  content: "\e917";
+}

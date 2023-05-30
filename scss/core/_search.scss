@@ -1,0 +1,143 @@
+.search {
+    width: 100%;
+    margin-top: 0.75em;
+
+    @media (min-width: 768px) {
+        margin-top: 0;
+        width: 41.875em;
+        margin: 0 1.875em;
+    }
+    // 
+    // &_hide {
+    //     display: none;
+    // }
+
+    &-form__inner {
+        position: relative;
+    }
+
+    &-form {}
+
+    &-form__input {
+        width: 100%;
+
+        background-color: transparent;
+        border: 0.0625em solid #ADCACB;
+        font-family: $main_font_family;
+        color: $main_color;
+        outline: none;
+
+        border-radius: 1.25em;
+        font-weight: 400;
+        transition: 0.3s;
+
+        font-size: 0.75em;
+        padding: 0.959em 6.5em 0.959em 1.75em;
+        @media (min-width: 768px) {
+            font-size: 1em;
+            padding: 1.219em 13em 1.219em 4.125em;
+        }
+
+        &:hover {}
+
+        &:focus {}
+
+        // Placeholder for input +++++++++++++++
+        @include placeholder {
+            color: #ADCACB;
+        }
+    }
+
+    &-btn {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        padding: 0;
+        border: none;
+        font: inherit;
+        color: inherit;
+        cursor: pointer;
+
+        width: 10.625em;
+
+        background-color: $color_success;
+        color: $color_white;
+
+        width: 3.5em;
+        border-top-right-radius: 0.9375em;
+        border-bottom-right-radius: 0.9375em;
+        @media (min-width: 768px) {
+            width: 10.625em;
+            border-top-right-radius: 1.25em;
+            border-bottom-right-radius: 1.25em;
+            transition: 0.3s;
+
+            &:hover {
+                background-color: darken($color_success, 10%);
+
+            }
+        }
+
+        span {
+            display: none;
+            @media (min-width: 768px) {
+                display: block;
+            }
+        }
+
+        i {
+            display: block;
+            @media (min-width: 768px) {
+                display: none;
+            }
+        }
+    }
+
+    &-loop {
+        @media (min-width: 768px) {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 2em;
+            color: #ADCACB;
+
+            i {
+                font-size: 1.125em;
+            }
+        }
+    }
+
+    &-reset {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #ADCACB;
+        opacity: 0;
+        transition: 0.3s;
+
+        right: 4em;
+        @media (min-width: 768px) {
+            right: 11.5em;
+
+        }
+
+        i {
+            display: inline-block;
+            font-size: 0.6875em;
+            padding: 0.5em;
+            font-weight: bold;
+        }
+
+        &.active {
+            opacity: 1;
+            cursor: pointer;
+        }
+    }
+
+}
