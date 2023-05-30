@@ -1013,10 +1013,12 @@ body {
 .catalogue__list {
   border: 1px solid #000;
   position: absolute;
-  bottom: -13.75em;
+  bottom: -23.75em;
   left: 0;
   background-color: #ffffff;
   width: 100%;
+  padding-top: 1.25em;
+  padding-bottom: 4em;
   opacity: 0;
   visibility: hidden;
   transform: translateY(-2em);
@@ -1024,10 +1026,52 @@ body {
 }
 .catalogue__list.active {
   opacity: 1;
-  height: auto;
-  opacity: 1;
   transform: translateY(0);
   visibility: visible;
+}
+.catalogue__menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.catalogue__item {
+  letter-spacing: 0.02em;
+  margin-bottom: 0.25em;
+  line-height: 1.4;
+}
+.catalogue__item:last-child {
+  margin-bottom: 0;
+}
+.catalogue__item a {
+  display: inline-block;
+  border-radius: 0.8572em;
+  padding: 0.8867em 1.14285em;
+  background-color: transparent;
+  color: #739596;
+  text-decoration: none;
+  font-size: 0.875em;
+}
+.catalogue__item a:hover {
+  background-color: #F5F9F9;
+}
+.catalogue__item_has-children > a {
+  position: relative;
+  padding-right: 3.25em;
+}
+.catalogue__item_has-children > a:after {
+  content: "";
+  font-family: "icon";
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  right: 2em;
+  font-size: 0.75em;
+  opacity: 0;
+  transition: 0.3s;
+}
+.catalogue__item_has-children > a:hover:after {
+  transform: translate(0%, -50%);
+  opacity: 1;
 }
 
 /* Header
