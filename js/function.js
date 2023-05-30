@@ -123,7 +123,8 @@ $(document).ready(function() {
     function doCatalogue() {
         $('.catalogue__btn').click(function(event) {
             $(this).find('.catalogue__toggle').toggleClass('active');
-            // $('.navbar').toggleClass('navbar_open');
+
+            $('.catalogue__list').toggleClass('active');
             // $('.header__toggle').toggleClass('header__toggle_open');
             // $( 'body' ).toggleClass( 'nav-open' );
         });

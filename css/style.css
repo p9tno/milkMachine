@@ -1010,9 +1010,31 @@ body {
 .catalogue__toggle.active:after {
   transform: rotate(-45deg);
 }
+.catalogue__list {
+  border: 1px solid #000;
+  position: absolute;
+  bottom: -13.75em;
+  left: 0;
+  background-color: #ffffff;
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-2em);
+  transition: 0.3s;
+}
+.catalogue__list.active {
+  opacity: 1;
+  height: auto;
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+}
 
 /* Header
  ----------------------------------------------------------------------------- */
+.header {
+  position: relative;
+}
 @media (min-width: 768px) {
   .header__row:first-child {
     background-color: #87C159;
@@ -1027,7 +1049,8 @@ body {
     width: 100vw;
     height: 100vh;
     padding-top: 5.25em;
-    background-color: #ddd;
+    padding-bottom: 2em;
+    background-color: #ffffff;
     transition: left 0.3s;
     overflow-y: auto;
     height: 100%;
@@ -1069,8 +1092,8 @@ body {
 }
 @media (max-width: 767px) {
   .header__toggle {
-    width: 1em;
-    height: 0.625em;
+    width: 1.5em;
+    height: 0.875em;
     color: #ADCACB;
     border: 0.0625em solid;
     border-left: 0;

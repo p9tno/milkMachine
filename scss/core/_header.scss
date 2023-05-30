@@ -1,6 +1,10 @@
 /* Header
  ----------------------------------------------------------------------------- */
 .header {
+	position: relative;
+	// background-color: $color_white;
+	// z-index: 50;
+
 	&__row {
 		&:first-child {
 
@@ -24,7 +28,8 @@
 			height: 100vh;
 
 			padding-top: 5.25em;
-			background-color: #ddd;
+			padding-bottom: 2em;
+			background-color: $color_white;
 
 			transition: left 0.3s;
 
@@ -75,8 +80,11 @@
 
 		@media (max-width: 767px) {
 
-			width: 1em;
-			height: 0.625em;
+			// width: 1em;
+			// height: 0.625em;
+
+			width: 1.5em;
+			height: 0.875em;
 
 			color: #ADCACB;
 			border: 0.0625em solid;

@@ -59,4 +59,33 @@
         }
 
     }
+
+    &__list {
+        border: 1px solid #000;
+        position: absolute;
+        bottom: -13.75em;
+        left: 0;
+        // z-index: -1;
+
+        background-color: $color_white;
+
+        width: 100%;
+
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-2em);
+
+        transition: 0.3s;
+
+        &.active {
+            opacity: 1;
+
+            height: auto;
+            opacity: 1;
+            transform: translateY(0);
+            // top: 100%;
+            visibility: visible;
+        }
+
+    }
 }
