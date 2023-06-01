@@ -1,0 +1,43 @@
+.logo {
+
+    display: flex;
+
+    align-items: center;
+
+    @media (min-width: 768px) {
+        flex-grow: 1;
+    }
+
+    &__img {
+        flex: none;
+        width: 12.5625em;
+        height: 1.625em;
+
+        font-size: 0.3732em;
+        @media (min-width: 768px) {
+            font-size: 1em;
+
+        }
+
+    }
+
+    &__desc {
+        margin-left: 0.5em;
+        line-height: 1;
+        @media (min-width: 768px) {
+            margin-left: 1.875em;
+            line-height: 1.313;
+            width: 15em;
+        }
+
+        span {
+            font-size: 0.625em;
+            @media (min-width: 768px) {
+                font-size: 0.75em;
+
+            }
+        }
+
+    }
+
+}

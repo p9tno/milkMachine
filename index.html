@@ -19,8 +19,12 @@
           <div class="header__top">
             <nav class="navbar" id="navbar">
               <ul class="menu">
-                <li class="menu-item"><a href="#">Каталог</a></li>
-                <li class="menu-item current-menu-item"><a href="#">Акции</a></li>
+                <li class="menu-item menu-item-has-children"><span>Каталог</span>
+                  <ul class="sub-menu">
+                    <li class="menu-item"><a href="#">Доильные аппараты и комплектующие</a></li>
+                  </ul>
+                </li>
+                <li class="menu-item current-menu-item percentage"><a href="#">Акции</a></li>
                 <li class="menu-item"><a href="#">Оплата</a></li>
                 <li class="menu-item"><a href="#">Доставка</a></li>
                 <li class="menu-item"><a href="#">Возврат</a></li>
@@ -47,21 +51,12 @@
         <div class="header__row">
           <div class="header__bottom">
             <div class="header__toggle mobile"></div>
-            <div class="logo"><a class="logo__img img" href="#"><img src="/img/logo.svg" alt="alt"/></a>
+            <div class="logo"><a class="logo__img img" href="/"><img src="/img/logo.svg" alt="alt"/></a>
               <div class="logo__desc desktop"><span>Интернет-магазин оборудования для животноводства и фермерства</span></div>
             </div>
             <div class="catalogue desktop">
               <div class="catalogue__btn">
                 <div class="catalogue__toggle"></div><span>Каталог</span>
-              </div>
-              <div class="catalogue__list">
-                <ul class="catalogue__menu">
-                  <li class="catalogue__item catalogue__item_has-children"><a href="#">Доильные аппараты<br> и комплектующие</a></li>
-                  <li class="catalogue__item"><a href="#">Самоходная техника</a></li>
-                  <li class="catalogue__item"><a href="#">Навесное оборудование</a></li>
-                  <li class="catalogue__item"><a href="#">Маслобойки</a></li>
-                  <li class="catalogue__item"><a href="#">Промывка доильного<br> оборудования</a></li>
-                </ul>
               </div>
             </div>
             <div class="basket"><a class="basket__link" href="#"><i class="icon_basket"></i>
@@ -76,6 +71,24 @@
                   <div class="search-reset"><i class="icon_close"></i></div>
                 </form>
               </div>
+            </div>
+          </div>
+          <div class="catalogue__wrap desktop">
+            <div class="catalogue__list">
+              <ul class="catalogue__menu">
+                <li class="catalogue__item catalogue__item_has-children"><a href="#">Доильные аппараты и комплектующи</a>
+                  <ul class="catalogue__submenu">
+                    <div class="catalogue__label"><span>Доильные аппараты и комплектующие</span></div>
+                    <li class="catalogue__item"><a href="#">Доильные аппараты для коров</a></li>
+                    <li class="catalogue__item"><a href="#">Доильные аппараты для коз и овец</a></li>
+                    <li class="catalogue__item"><a href="#">Комплектующие к доильным аппаратам</a></li>
+                  </ul>
+                </li>
+                <li class="catalogue__item"><a href="#">Самоходная техника</a></li>
+                <li class="catalogue__item"><a href="#">Навесное оборудование</a></li>
+                <li class="catalogue__item"><a href="#">Маслобойки</a></li>
+                <li class="catalogue__item"><a href="#">Промывка доильного оборудования</a></li>
+              </ul>
             </div>
           </div>
         </div>
@@ -97,6 +110,7 @@
             <h2 class="section__title"><span>testcontebt</span></h2>
             <div class="testcontebt__content">
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. lor lor</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. lor lor</p>
             </div>
           </div>
         </section>
@@ -107,8 +121,101 @@
         <!-- end projectModal-->
       </main>
       <footer class="footer">
-        <div class="footer__content">
-          <p><script type="text/javascript">document.write(new Date().getFullYear());</script></p>
+        <div class="footer__top">
+          <div class="footer__row">
+            <div class="footer__col">
+              <div class="logo"><a class="logo__img img" href="/"><img src="/img/logo_w.svg" alt="alt"/></a>
+                <div class="logo__desc"><span>Интернет-магазин оборудования для животноводства и фермерства</span></div>
+              </div>
+            </div>
+            <div class="footer__col">
+              <div class="footer__cat desktop">
+                <div class="footer__label"><span>Популярные категории</span></div>
+                <ul class="menu">
+                  <li class="menu-item"><a href="#">Доильные аппараты и комплектующие</a></li>
+                </ul>
+              </div>
+              <div class="footer__menu desktop">
+                <div class="footer__label"><span>Меню</span></div>
+                <ul class="menu">
+                  <li class="menu-item"><a href="#">Акции</a></li>
+                  <li class="menu-item"><a href="#">Оплата</a></li>
+                  <li class="menu-item"><a href="#">Доставка</a></li>
+                  <li class="menu-item"><a href="#">Возврат</a></li>
+                  <li class="menu-item"><a href="#">О компании</a></li>
+                  <li class="menu-item"><a href="#">Блог</a></li>
+                  <li class="menu-item"><a href="#">Контакты</a></li>
+                </ul>
+              </div>
+              <div class="footer__info">
+                <div class="footer__item">
+                  <div class="footer__label"><span>Контакты</span></div>
+                  <div class="phone">
+                    <div class="phone__label"><span>Будние дни с 9:00-18:00</span></div>
+                    <div class="phone__link"><a href="tel:+375 29 630 91 98">+375 29 630 91 98</a></div>
+                  </div>
+                  <div class="messenger">
+                    <div class="messenger__label"><span>Задайте вопрос, мы онлайн</span></div>
+                    <div class="messenger__list">
+                      <div class="messenger__item"><a class="messenger__link" href="https://wapp.click/7391205408" target="_blank"><i class="icon_telegram"></i></a></div>
+                      <div class="messenger__item"><a class="messenger__link" href="https://wa.me/+" target="_blank"><i class="icon_whatsapp"></i></a></div>
+                      <div class="messenger__item"><a class="messenger__link" href="viber://chat?number=%2B73912054081" target="_blank"><i class="icon_viber"></i></a></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="footer__item desktop">
+                  <div class="footer__label"><span>Адрес</span></div>
+                  <div class="footer__location"><span>Беларусь, Могилёвская область, г. Бобруйск, ул. Октябрьская 149а, каб. 23</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="footer__col mobile">
+              <div class="messenger">
+                <div class="footer__label"><span>Мы в соц. сетях</span></div>
+                <div class="messenger__list">
+                  <div class="messenger__item"><a class="messenger__link" href="#" target="_blank"><i class="icon_youtube"></i></a></div>
+                  <div class="messenger__item"><a class="messenger__link" href="#" target="_blank"><i class="icon_instagram"></i></a></div>
+                  <div class="messenger__item"><a class="messenger__link" href="#" target="_blank"><i class="icon_facebook"></i></a></div>
+                  <div class="messenger__item"><a class="messenger__link" href="#" target="_blank"><i class="icon_vk"></i></a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer__center desktop">
+          <div class="footer__row">
+            <div class="messenger">
+              <div class="footer__label"><span>Мы в соц. сетях</span></div>
+              <div class="messenger__list">
+                <div class="messenger__item"><a class="messenger__link" href="#" target="_blank"><i class="icon_youtube"></i></a></div>
+                <div class="messenger__item"><a class="messenger__link" href="#" target="_blank"><i class="icon_instagram"></i></a></div>
+                <div class="messenger__item"><a class="messenger__link" href="#" target="_blank"><i class="icon_facebook"></i></a></div>
+                <div class="messenger__item"><a class="messenger__link" href="#" target="_blank"><i class="icon_vk"></i></a></div>
+              </div>
+            </div>
+            <div class="payment">
+              <div class="payment__list">
+                <div class="payment__item">
+                  <div class="payment__img img"><img src="../../img/payment_1.png" alt="alt"/></div>
+                </div>
+                <div class="payment__item">
+                  <div class="payment__img img"><img src="../../img/payment_2.png" alt="alt"/></div>
+                </div>
+                <div class="payment__item">
+                  <div class="payment__img img"><img src="../../img/payment_3.png" alt="alt"/></div>
+                </div>
+                <div class="payment__item">
+                  <div class="payment__img img"><img src="../../img/payment_4.png" alt="alt"/></div>
+                </div>
+                <div class="payment__item">
+                  <div class="payment__img img"><img src="../../img/payment_5.png" alt="alt"/></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <div class="footer__row"><span>ООО "Белэксальто" 2017-<script type="text/javascript">document.write(new Date().getFullYear());</script></span><a href="#">Политика конфиденциальности</a><a href="#">Договор оферты</a><span>Сделано с любовью <a href="https://paradigma.website/" target="_blank">в Paradigma.website</a></span></div>
         </div>
       </footer>
       <div class="toTop"><a href="#wrapper"> <i class="icon_to_top"></i></a></div>

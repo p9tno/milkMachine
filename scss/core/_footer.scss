@@ -1,14 +1,271 @@
-/* Footer
- ----------------------------------------------------------------------------- */
 .footer {
-	position: relative;
-	padding: 1em 0;
-	background-color: #ddd;
+	background-color: $color_success;
+	color: $color_white;
 
-	&__content {
+	padding-top: 1.25em;
+	padding-bottom: 1.25em;
+	@media (min-width: 768px) {
+		padding-top: 3.75em;
+		padding-bottom: 3.5em;
+
+	}
+
+	&__top {
+		margin-bottom: 2.25em;
+
+		.footer__row {
+			flex-wrap: wrap;
+		}
+		@media (min-width: 768px) {
+			margin-bottom: 2.5em;
+
+			.footer__row {
+				align-items: flex-start;
+			}
+		}
+	}
+
+	&__center {
+		@media (min-width: 768px) {
+			margin-bottom: 4em;
+
+			.footer__row {
+				position: relative;
+				justify-content: flex-end;
+			}
+
+			.messenger {
+				position: absolute;
+				top: -9em;
+				left: 1.375em;
+			}
+		}
+
+	}
+
+	&__bottom {
+		.footer__row {
+			flex-direction: column;
+
+			@media (min-width: 768px) {
+				flex-direction: row;
+			}
+		}
+
+		a,
+		span {
+			width: fit-content;
+			color: $color_white;
+
+			font-size: 0.625em;
+			margin-bottom: 1.75em;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+			@media (min-width: 768px) {
+				font-size: 0.875em;
+				margin-bottom: 0;
+			}
+		}
+
+		a {
+			position: relative;
+			text-decoration: none;
+
+			&:after {
+				content: '';
+				position: absolute;
+				display: inline-block;
+				width: 100%;
+				left: 0;
+				bottom: 0.125em;
+				border-bottom: 0.0625em solid;
+				border-color: inherit;
+
+				@media (min-width: 768px) {
+					transition: width 0.3s;
+				}
+			}
+
+			@media (min-width: 768px) {
+				&:hover {
+					&:after {
+						width: 80%;
+					}
+				}
+			}
+
+		}
+
+		span {
+			a {
+				font-size: 1em;
+			}
+		}
+
+	}
+
+	&__row {
 		@extend .container_center;
 		display: flex;
 		justify-content: space-between;
-		align-items: center;
+	}
+
+	&__col {
+		display: flex;
+
+		@media (max-width: 767px) {
+			&:first-child {
+				width: 100%;
+				margin-bottom: 2em;
+			}
+		}
+
+		> * {
+			@media (min-width: 768px) {
+				margin-right: 7.5em;
+
+				&:last-child {
+					margin-right: 0;
+				}
+			}
+		}
+	}
+
+	&__cat {
+		@media (min-width: 768px) {
+			width: 17.75em;
+		}
+	}
+
+	&__label {
+		letter-spacing: 0.04em;
+		text-transform: uppercase;
+		margin-bottom: 0.75em;
+		@media (min-width: 768px) {
+			margin-bottom: 1.25em;
+		}
+
+		span {
+			font-size: 0.75em;
+			font-weight: 500;
+
+			@media (min-width: 768px) {
+				font-size: 1em;
+			}
+		}
+	}
+
+	&__menu {
+		@media (min-width: 768px) {
+			width: 6.875em;
+		}
+	}
+
+	&__info {
+		@media (min-width: 768px) {
+			width: 15em;
+		}
+	}
+
+	&__item {
+
+		@media (min-width: 768px) {
+			margin-bottom: 4em;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+
+		}
+	}
+
+	&__location {
+		@media (min-width: 768px) {
+			letter-spacing: 0.04em;
+			line-height: 1.4;
+
+			span {
+				font-size: 1em;
+			}
+
+		}
+	}
+
+	.phone {
+		margin-bottom: 1em;
+		font-size: 0.75em;
+		@media (min-width: 768px) {
+			margin-bottom: 1.25em;
+			font-size: 1em;
+		}
+
+	}
+
+	.messenger {
+		flex-direction: column;
+
+		.messenger__label {
+			margin-bottom: 0.5em;
+		}
+
+		.messenger__link {
+			font-size: 0.875em;
+			@media (min-width: 768px) {
+				font-size: 1.429em;
+			}
+		}
+	}
+
+	@media (min-width: 768px) {
+		.menu {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+
+		.menu-item {
+			letter-spacing: 0.04em;
+			line-height: 1.4;
+			margin-bottom: 0.725em;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+
+			a {
+				text-decoration: none;
+				color: rgba($color_white, 0.8);
+				font-size: 1em;
+			}
+
+			&.current-menu-item,
+			&:hover {
+				a {
+					color: rgba($color_white, 1);
+				}
+			}
+		}
+
+	}
+
+}
+
+@media (min-width: 768px) {
+	.payment {
+		&__list {
+			display: flex;
+			align-items: center;
+		}
+
+		&__item {
+			margin-right: 1.625em;
+
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+
 	}
 }

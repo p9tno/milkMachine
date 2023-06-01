@@ -57,6 +57,7 @@ window.onload = function () {
 
 $(document).ready(function() {
     console.log('ready');
+
     window.addEventListener('resize', () => {
         // Запрещаем выполнение скриптов при смене только высоты вьюпорта (фикс для скролла в IOS и Android >=v.5)
         if (app.resized == screen.width) { return; }
@@ -66,41 +67,41 @@ $(document).ready(function() {
         checkOnResize();
     });
 
-    function checkOnResize() {
-        if (isLgWidth()) {
-            console.log('isLgWidth');
-        } else {
-            console.log('isLgWidth else');
-        }
-        // или создаем функцию
-        // test();
-    }
+    // function checkOnResize() {
+    //     if (isLgWidth()) {
+    //         console.log('isLgWidth');
+    //     } else {
+    //         console.log('isLgWidth else');
+    //     }
+    //     // или создаем функцию
+    //     // test();
+    // }
 
-    function test() {
-        if (isLgWidth()) {
-            console.log('isLgWidth');
-        } else {
-            console.log('isLgWidth else');
-        }
-    }
+    // function test() {
+    //     if (isLgWidth()) {
+    //         console.log('isLgWidth');
+    //     } else {
+    //         console.log('isLgWidth else');
+    //     }
+    // }
 
-    function scrollPage () {
-        $(".toTop").on("click","a", function (event) {
-            event.preventDefault();
-            let id  = $(this).attr('href');
-            let top = $(id).offset().top;
-            $('body,html').animate({scrollTop: top}, 1500);
-        });
-
-        $(window).scroll(function(){
-            if($(window).scrollTop()>500){
-                $('.toTop').fadeIn(900)
-            }else{
-                $('.toTop').fadeOut(700)
-            }
-        });
-    }
-    scrollPage();
+    // function scrollPage () {
+    //     $(".toTop").on("click","a", function (event) {
+    //         event.preventDefault();
+    //         let id  = $(this).attr('href');
+    //         let top = $(id).offset().top;
+    //         $('body,html').animate({scrollTop: top}, 1500);
+    //     });
+    //
+    //     $(window).scroll(function(){
+    //         if($(window).scrollTop()>500){
+    //             $('.toTop').fadeIn(900)
+    //         }else{
+    //             $('.toTop').fadeOut(700)
+    //         }
+    //     });
+    // }
+    // scrollPage();
 
     function showModal() {
         $('.show_modal_js').on('click', function (e) {
@@ -126,7 +127,7 @@ $(document).ready(function() {
 
             $('.catalogue__list').toggleClass('active');
             // $('.header__toggle').toggleClass('header__toggle_open');
-            // $( 'body' ).toggleClass( 'nav-open' );
+            $( '#wrapper' ).toggleClass( 'catalogue-open' );
         });
     }
     doCatalogue();
@@ -150,8 +151,6 @@ $(document).ready(function() {
             search_input.val('');
             $(this).removeClass('active');
         });
-
-
     }
     resetSearch();
 

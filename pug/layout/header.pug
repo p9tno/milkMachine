@@ -6,10 +6,14 @@ header.header
         .header__top
             nav.navbar#navbar
                 ul.menu
-                    li.menu-item
-                        a(href="#") Каталог
+                    li.menu-item.menu-item-has-children
+                        span Каталог
+                        ul.sub-menu
+                            li.menu-item
+                                a(href="#") Доильные аппараты и комплектующие
 
-                    li.menu-item.current-menu-item
+
+                    li.menu-item.current-menu-item.percentage
                         a(href="#") Акции
 
                     each item in ['Оплата', 'Доставка', 'Возврат', 'О компании', 'Блог', 'Контакты' ]
@@ -48,7 +52,7 @@ header.header
 
 
             .logo
-                a.logo__img.img(href="#")
+                a.logo__img.img(href="/")
                     img(src="/img/logo.svg", alt="alt")
                 .logo__desc.desktop
                     span Интернет-магазин оборудования для животноводства и фермерства
@@ -58,32 +62,6 @@ header.header
                 .catalogue__btn
                     .catalogue__toggle
                     span Каталог
-
-                .catalogue__list
-
-                    ul.catalogue__menu
-
-                        li.catalogue__item.catalogue__item_has-children
-
-                            a(href="#") Доильные аппараты<br> и комплектующие
-                            //- ul.catalogue__submenu
-                            //-     li.catalogue__item
-                            //-         a(href="#") Доильные аппараты для коров
-                            //-     li.catalogue__item
-                            //-         a(href="#") Доильные аппараты для коз и овец
-                            //-     li.catalogue__item
-                            //-         a(href="#") Комплектующие к доильным аппаратам
-
-
-                        li.catalogue__item
-                            a(href="#") Самоходная техника
-                        li.catalogue__item
-                            a(href="#") Навесное оборудование
-                        li.catalogue__item
-                            a(href="#") Маслобойки
-                        li.catalogue__item
-                            a(href="#") Промывка доильного<br> оборудования
-
 
 
             .basket
@@ -108,3 +86,32 @@ header.header
 
                         .search-reset
                             i.icon_close
+
+        .catalogue__wrap.desktop
+
+            .catalogue__list
+
+                ul.catalogue__menu
+
+                    li.catalogue__item.catalogue__item_has-children
+
+                        a(href="#") Доильные аппараты и комплектующи
+                        ul.catalogue__submenu
+                            .catalogue__label
+                                span Доильные аппараты и комплектующие
+                            li.catalogue__item
+                                a(href="#") Доильные аппараты для коров
+                            li.catalogue__item
+                                a(href="#") Доильные аппараты для коз и овец
+                            li.catalogue__item
+                                a(href="#") Комплектующие к доильным аппаратам
+
+
+                    li.catalogue__item
+                        a(href="#") Самоходная техника
+                    li.catalogue__item
+                        a(href="#") Навесное оборудование
+                    li.catalogue__item
+                        a(href="#") Маслобойки
+                    li.catalogue__item
+                        a(href="#") Промывка доильного оборудования

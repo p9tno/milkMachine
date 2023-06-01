@@ -1,93 +1,165 @@
-.menu {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-
-    @media (min-width: 768px) {
-        display: flex;
-    }
-
-    &-item {
-
-        letter-spacing: 0.02em;
-        text-transform: uppercase;
-
-        margin-bottom: 1.5em;
-
-        &:last-child {
-            margin-bottom: 0;
-        }
+.header {
+    .menu {
+        margin: 0;
+        padding: 0;
+        list-style: none;
 
         @media (min-width: 768px) {
-            margin-bottom: 0;
-            margin-right: 2.5em;
+            display: flex;
+        }
+
+        &-item {
+
+            letter-spacing: 0.02em;
+            text-transform: uppercase;
+
+            margin-bottom: 1.5em;
 
             &:last-child {
-                margin-right: 0;
+                margin-bottom: 0;
             }
-        }
 
-        a {
-            text-decoration: none;
-            font-size: 0.875em;
-            color: $main_color;
             @media (min-width: 768px) {
-                color: $color_white;
+                margin-bottom: 0;
+                margin-right: 2.5em;
 
-            }
-        }
-
-        &:nth-child(2) {
-            a {
-                &:after,
-                &:before {
-                    content: '\e90f';
-                    font-family: $icon_font_family;
-
-                    // display: inline-flex;
-                    align-items: center;
-                    justify-content: center;
-                    width: 2.287em;
-                    height: 2.287em;
-                    border-radius: 100%;
-                    // line-height: 1;
-
-                    background-color: $color_white;
-                    color: $color_success;
-
-                    transform: translateY(-0.125em);
-
-                    font-size: 0.75em;
+                &:last-child {
+                    margin-right: 0;
                 }
+            }
 
-                &:before {
-                    margin-right: 0.375em;
-                    background-color: $color_white;
-                    color: $color_success;
-                    display: none;
-                    @media (min-width: 768px) {
-                        display: inline-flex;
+            a,
+            span {
+                text-decoration: none;
+                font-size: 0.875em;
+                color: $main_color;
+                @media (min-width: 768px) {
+                    color: rgba($color_white, 0.8);
+                }
+            }
+
+            @media (min-width: 768px) {
+                &.current-menu-item,
+                &:hover {
+                    a {
+                        color: rgba($color_white, 1);
                     }
                 }
+            }
+
+            // &:nth-child(2)
+            &.percentage {
+                a {
+                    &:after,
+                    &:before {
+                        content: '\e90f';
+                        font-family: $icon_font_family;
+
+                        // display: inline-flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 2.287em;
+                        height: 2.287em;
+                        border-radius: 100%;
+                        // line-height: 1;
+
+                        background-color: $color_white;
+                        color: $color_success;
+
+                        transform: translateY(-0.125em);
+
+                        font-size: 0.75em;
+                    }
+
+                    &:before {
+                        margin-right: 0.375em;
+                        background-color: $color_white;
+                        color: $color_success;
+                        display: none;
+                        @media (min-width: 768px) {
+                            display: inline-flex;
+                        }
+                    }
+
+                    &:after {
+                        margin-left: 0.375em;
+                        background-color: $color_success;
+                        color: $color_white;
+
+                        display: inline-flex;
+                        @media (min-width: 768px) {
+                            display: none;
+                        }
+                    }
+                }
+            }
+
+            @media (min-width: 768px) {
+                &:first-child {
+                    display: none;
+                }
+            }
+        }
+
+        .menu-item-has-children {
+            span {
+                position: relative;
 
                 &:after {
-                    margin-left: 0.375em;
-                    background-color: $color_success;
-                    color: $color_white;
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%)scale(1);
+                    right: -4em;
 
-                    display: inline-flex;
-                    @media (min-width: 768px) {
-                        display: none;
+                    content: '\e900';
+                    font-family: $icon_font_family;
+                    font-size: 0.5em;
+
+                    transition: 0.3s;
+
+                }
+
+            }
+
+            &:hover {
+                .sub-menu {
+                    height: auto;
+                    opacity: 1;
+                    visibility: visible;
+                    margin-top: 1em;
+                }
+
+                span {
+                    &:after {
+                        transform: translateY(-50%)scale(-1);
+                        margin-top: -0.125em;
                     }
                 }
             }
+
+            .sub-menu {
+
+                margin: 0;
+                padding: 0;
+                list-style: none;
+
+                height: 0;
+                opacity: 0;
+                visibility: hidden;
+
+                .menu-item {
+                    letter-spacing: 0.05em;
+                    text-transform: none;
+                    margin-bottom: 0.5em;
+
+                    a {
+                        font-size: 1em;
+                    }
+                }
+            }
+
         }
 
-        @media (min-width: 768px) {
-            &:first-child {
-                display: none;
-            }
-        }
     }
 
 }

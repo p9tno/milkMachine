@@ -10,7 +10,15 @@
 
 			@media (min-width: 768px) {
 				background-color: $color_success;
+				position: relative;
+				z-index: 1;
 
+			}
+		}
+
+		&:last-child {
+			@media (min-width: 768px) {
+				background-color: $color_white;
 			}
 		}
 	}
@@ -28,7 +36,7 @@
 			height: 100vh;
 
 			padding-top: 5.25em;
-			padding-bottom: 2em;
+			padding-bottom: 5.25em;
 			background-color: $color_white;
 
 			transition: left 0.3s;
@@ -38,7 +46,6 @@
 			}
 
 			overflow-y: auto;
-			height: 100%;
 		}
 
 		@media (min-width: 768px) {
@@ -52,11 +59,10 @@
 
 	&__bottom {
 		@extend .container_center;
+		background-color: $color_white;
 
 		position: relative;
-		z-index: 2;
-
-		background-color: $color_white;
+		z-index: 1;
 
 		padding-top: 0.75em;
 		padding-bottom: 1.25em;
@@ -175,39 +181,6 @@
 		}
 
 	}
-}
-
-.logo {
-	display: flex;
-	align-items: center;
-
-	@media (min-width: 768px) {
-		flex-grow: 1;
-	}
-
-	&__img {
-		// display: block;
-		width: 12.5625em;
-		height: 1.625em;
-
-		font-size: 0.3732em;
-		@media (min-width: 768px) {
-			font-size: 1em;
-
-		}
-
-	}
-
-	&__desc {
-		width: 15em;
-		line-height: 1.313;
-		margin-left: 1.875em;
-
-		span {
-			font-size: 0.75em;
-		}
-	}
-
 }
 
 .basket {

@@ -1,4 +1,107 @@
 footer.footer
-    .footer__content
-        p <script type="text/javascript">document.write(new Date().getFullYear());</script>
+    .footer__top
+        .footer__row
+            .footer__col
+                .logo
+                    a.logo__img.img(href="/")
+                        img(src="/img/logo_w.svg", alt="alt")
+                    .logo__desc
+                        span Интернет-магазин оборудования для животноводства и фермерства
 
+            .footer__col
+                .footer__cat.desktop
+                    .footer__label
+                        span Популярные категории
+                    ul.menu
+                        li.menu-item
+                            a(href="#") Доильные аппараты и комплектующие
+
+                .footer__menu.desktop
+                    .footer__label
+                        span Меню
+                    ul.menu
+                        each item in ['Акции', 'Оплата', 'Доставка', 'Возврат', 'О компании', 'Блог', 'Контакты', ]
+                            li.menu-item
+                                a(href="#")=item
+                .footer__info
+                    .footer__item
+                        .footer__label
+                            span Контакты
+
+                        .phone
+                            .phone__label
+                                span Будние дни с 9:00-18:00
+                            .phone__link
+                                a(href="tel:+375 29 630 91 98") +375 29 630 91 98
+
+                        .messenger
+                            .messenger__label
+                                span Задайте вопрос, мы онлайн
+                            .messenger__list
+                                .messenger__item
+                                    a.messenger__link(href="https://wapp.click/7391205408" target="_blank")
+                                        i.icon_telegram
+                                .messenger__item
+                                    a.messenger__link(href="https://wa.me/+" target="_blank")
+                                        i.icon_whatsapp
+                                .messenger__item
+                                    a.messenger__link(href="viber://chat?number=%2B73912054081" target="_blank")
+                                        i.icon_viber
+
+                    .footer__item.desktop
+                        .footer__label
+                            span Адрес
+                        .footer__location
+                            span Беларусь, Могилёвская область, г. Бобруйск, ул. Октябрьская 149а, каб. 23
+
+            .footer__col.mobile
+                .messenger
+                    .footer__label
+                        span Мы в соц. сетях
+                    .messenger__list
+                        .messenger__item
+                            a.messenger__link(href="#" target="_blank")
+                                i.icon_youtube
+                        .messenger__item
+                            a.messenger__link(href="#" target="_blank")
+                                i.icon_instagram
+                        .messenger__item
+                            a.messenger__link(href="#" target="_blank")
+                                i.icon_facebook
+                        .messenger__item
+                            a.messenger__link(href="#" target="_blank")
+                                i.icon_vk
+
+    .footer__center.desktop
+        .footer__row
+            .messenger
+                .footer__label
+                    span Мы в соц. сетях
+                .messenger__list
+                    .messenger__item
+                        a.messenger__link(href="#" target="_blank")
+                            i.icon_youtube
+                    .messenger__item
+                        a.messenger__link(href="#" target="_blank")
+                            i.icon_instagram
+                    .messenger__item
+                        a.messenger__link(href="#" target="_blank")
+                            i.icon_facebook
+                    .messenger__item
+                        a.messenger__link(href="#" target="_blank")
+                            i.icon_vk
+
+            .payment
+                .payment__list
+                    each item in [1,2,3,4,5]
+                        .payment__item
+                            .payment__img.img
+                                img(src="../../img/payment_"+item+".png", alt="alt")
+
+
+    .footer__bottom
+        .footer__row
+            span ООО "Белэксальто" 2017-<script type="text/javascript">document.write(new Date().getFullYear());</script>
+            a(href="#") Политика конфиденциальности
+            a(href="#") Договор оферты
+            span Сделано с любовью <a href="https://paradigma.website/" target="_blank">в Paradigma.website</a>
