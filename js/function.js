@@ -64,7 +64,7 @@ $(document).ready(function() {
         app.resized = screen.width;
         // console.log('resize');
         // console.log(screen.width);
-        checkOnResize();
+        // checkOnResize();
     });
 
     // function checkOnResize() {
@@ -128,6 +128,7 @@ $(document).ready(function() {
             $('.catalogue__list').toggleClass('active');
             // $('.header__toggle').toggleClass('header__toggle_open');
             $( '#wrapper' ).toggleClass( 'catalogue-open' );
+            $( 'body' ).toggleClass( 'nav-open' );
         });
     }
     doCatalogue();

@@ -1,31 +1,25 @@
 $(document).ready(function() {
 
 
-    const certificate = new Swiper('.certificate-swiper-js', {
-        slidesPerView: 2,
+    const single = new Swiper('.swiper_single_js', {
+        slidesPerView: 1,
         spaceBetween: 10,
-        speed: 500,
+        speed: 1000,
         loop: true,
-        // autoplay: {
-        //   delay: 5000,
-        // },
+        autoplay: {
+          delay: 5000,
+        },
 
         navigation: {
             nextEl: '.icon_arrow_right',
             prevEl: '.icon_arrow_left',
         },
         pagination: {
-            el: '.certificate__dotted',
+            el: '.swiper__dotted',
             clickable: true,
         },
 
-        breakpoints: {
-            768: {
-                spaceBetween: 24,
-                slidesPerView: 3,
-            },
 
-        }
     });
 
     const ourhouses = new Swiper('.ourhouses-swiper-js', {

@@ -1,0 +1,108 @@
+.subcategories {
+    &__list {
+        @media (min-width: 768px) {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-auto-rows: minmax(11.75em, auto);
+            grid-gap: 2.125em;
+        }
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        background-color: #F5F9F9;
+        text-decoration: none;
+
+        padding: 0.5em;
+        border-radius: 1em;
+        margin-bottom: 1em;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        @media (min-width: 768px) {
+            padding: 1.25em;
+            border-radius: 1.25em;
+            margin-bottom: 0;
+
+            &:hover {
+                .subcategories__img {
+                    img {
+                        transform: scale(1.4);
+                    }
+                }
+            }
+        }
+    }
+
+    &__img {
+        flex: none;
+        overflow: hidden;
+
+        width: 3.875em;
+        height: 5em;
+        margin-right: 0.75em;
+        border-radius: 0.5em;
+
+        @media (min-width: 768px) {
+            width: 7.25em;
+            height: 9.25em;
+            margin-right: 2em;
+            border-radius: 0.75em;
+
+            img {
+                transform: scale(1);
+                transition: 0.5s;
+            }
+        }
+
+    }
+
+    &__content {
+        letter-spacing: 0.02em;
+
+    }
+
+    &__quantity {
+        color: $color_primary;
+        line-height: 1.4;
+        margin-bottom: 0.5em;
+        @media (min-width: 768px) {
+            margin-bottom: 1.5em;
+
+        }
+
+        span {
+            font-size: 0.625em;
+            @media (min-width: 768px) {
+                font-size: 0.875em;
+
+            }
+        }
+    }
+
+    &__title {
+        font-family: $second_font_family;
+        font-weight: 600;
+        line-height: 1.6;
+        color: $main_color;
+
+        font-size: 0.75em;
+        @media (min-width: 768px) {
+            font-size: 1.25em;
+
+        }
+    }
+
+}
+
+.section {
+    &__title {}
+
+}
+
+.container_center {}
+
+.img {}

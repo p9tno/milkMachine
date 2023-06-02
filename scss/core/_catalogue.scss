@@ -1,11 +1,5 @@
 @media (min-width: 768px) {
     .catalogue {
-        &-open {
-            background-color: rgba(16, 21, 12, 0.8);
-            // backdrop-filter: blur(4px);
-
-        }
-
         &__btn {
             display: flex;
             align-items: center;
@@ -88,6 +82,7 @@
             position: absolute;
             top: -30em;
             left: 0;
+            z-index: 2;
 
             background-color: $color_white;
             width: 100%;

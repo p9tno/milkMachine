@@ -1,0 +1,72 @@
+.preview {
+    padding-bottom: 0.5em;
+    @media (min-width: 768px) {
+        padding-bottom: 1.25em;
+    }
+
+    &__slider {
+        position: relative;
+
+        .swiper {
+            border-radius: 1.25em;
+            @media (min-width: 768px) {
+                border-radius: 2.25em;
+            }
+
+        }
+    }
+
+    &__img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__content {
+        position: relative;
+        overflow: hidden;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        color: $color_white;
+
+        padding: 1.25em 1.25em 0.9375em;
+        min-height: 15.625em;
+        border-radius: 1.25em;
+
+        @media (min-width: 768px) {
+            padding: 7em 6.25em;
+            min-height: 31.25em;
+            border-radius: 2.25em;
+        }
+    }
+
+    &__title {
+        position: relative;
+        letter-spacing: 0.05em;
+        width: 9.5em;
+        @media (min-width: 768px) {
+            width: 40em;
+        }
+
+        span {
+            font-weight: 500;
+            line-height: 1.4;
+            font-size: 1.25em;
+            @media (min-width: 768px) {
+                line-height: 1.5;
+                font-size: 3em;
+            }
+        }
+    }
+
+    &__btn {
+        position: relative;
+        margin-top: 2em;
+    }
+
+}
