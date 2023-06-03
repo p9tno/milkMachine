@@ -27,7 +27,7 @@ block content
 
 
                     .swiper__dotted
-                .swiper__arrows
+                .swiper__arrows.arrows_preview_js
                     i.icon_arrow_left
                     i.icon_arrow_right
 
@@ -66,3 +66,97 @@ block content
                             .subcategories__title=item.title
 
     // end subcategories
+
+    // begin catalog
+    section.catalog.section
+        .container_center
+
+            .catalog__caption
+                h2.section__title
+                    span Хиты продаж
+                .catalog__more.desktop.snakeline
+                    a(href="#") Cмотреть все товары
+
+            .catalog__slider
+                .swiper.swiper_catalog_js
+                    .swiper-wrapper
+                        each item in ['', '', '', '', '', '', '', '' ]
+                            .swiper-slide
+
+                                //- start catalog__item
+                                .catalog__item
+                                    .catalog__info 
+                                        span Хит продаж
+                                    a(href="#").catalog__img
+                                        img(src="../../img/catalog.jpg", alt="alt")
+                                    a(href="#").catalog__title Доильный аппарат ТК 2-РК для коров
+                                    .catalog__boolean В наличии
+                                    //- .catalog__boolean.false Под заказ
+                                    .catalog__price
+                                        ins
+                                            span.woocommerce-Price-amount.amount
+                                                bdi 2000 <span class="woocommerce-Price-currencySymbol">руб.<span>
+
+                                    .catalog__btn
+                                        a.btn(href="#") В корзину
+
+                                //- end catalog__item
+
+
+
+                .swiper__arrows
+                    i.icon_arrow_left
+                    i.icon_arrow_right
+
+            .catalog__more.mobile
+                a(href="#") Cмотреть все товары
+
+
+    // end catalog
+
+    // begin catalog
+    section.catalog.section
+        .container_center
+
+            .catalog__caption
+                h2.section__title
+                    span Новинки
+                .catalog__more.desktop.snakeline
+                    a(href="#") Cмотреть все товары
+
+            .catalog__slider
+                .swiper.swiper_catalog_js
+                    .swiper-wrapper
+                        each item in ['', '', '', '', '', '', '', '' ]
+                            .swiper-slide
+
+                                //- start catalog__item
+                                .catalog__item.new
+                                    .catalog__info 
+                                        span Новинка
+                                    a(href="#").catalog__img
+                                        img(src="../../img/catalog.jpg", alt="alt")
+                                    a(href="#").catalog__title Доильный аппарат ТК 2-РК для коров
+                                    .catalog__boolean В наличии
+                                    //- .catalog__boolean.false Под заказ
+                                    .catalog__price
+                                        ins
+                                            span.woocommerce-Price-amount.amount
+                                                bdi 2000 <span class="woocommerce-Price-currencySymbol">руб.<span>
+
+                                    .catalog__btn
+                                        a.btn(href="#") В корзину
+
+                                //- end catalog__item
+
+
+
+                .swiper__arrows
+                    i.icon_arrow_left
+                    i.icon_arrow_right
+
+            .catalog__more.mobile
+                a(href="#") Cмотреть все товары
+
+
+    // end catalog

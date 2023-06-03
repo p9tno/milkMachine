@@ -126,9 +126,13 @@ $(document).ready(function() {
             $(this).find('.catalogue__toggle').toggleClass('active');
 
             $('.catalogue__list').toggleClass('active');
-            // $('.header__toggle').toggleClass('header__toggle_open');
             $( '#wrapper' ).toggleClass( 'catalogue-open' );
             $( 'body' ).toggleClass( 'nav-open' );
+        });
+
+        $('.menu-item-has-children').click(function(event) {
+            $(this).toggleClass('active');
+            $(this).find('.sub-menu').slideToggle();
         });
     }
     doCatalogue();

@@ -121,14 +121,7 @@
 
             }
 
-            &:hover {
-                .sub-menu {
-                    height: auto;
-                    opacity: 1;
-                    visibility: visible;
-                    margin-top: 1em;
-                }
-
+            &.active {
                 span {
                     &:after {
                         transform: translateY(-50%)scale(-1);
@@ -138,19 +131,20 @@
             }
 
             .sub-menu {
+                display: none;
 
-                margin: 0;
+                margin: 1em 0 0;
                 padding: 0;
                 list-style: none;
-
-                height: 0;
-                opacity: 0;
-                visibility: hidden;
 
                 .menu-item {
                     letter-spacing: 0.05em;
                     text-transform: none;
                     margin-bottom: 0.5em;
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
 
                     a {
                         font-size: 1em;
