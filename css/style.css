@@ -2430,6 +2430,9 @@ body {
   .catalog__item {
     padding: 1.875em;
   }
+  .catalog__item:hover .catalog__img img {
+    transform: scale(1.1);
+  }
 }
 .catalog__item.sale .catalog__price ins {
   color: #FF2334;
@@ -2442,6 +2445,7 @@ body {
 }
 .catalog__info {
   position: absolute;
+  z-index: 1;
   letter-spacing: 0.02em;
   top: 0.625em;
   left: 0.625em;
@@ -2477,6 +2481,8 @@ body {
   .catalog__img {
     height: 16.25em;
     margin-bottom: 0.75em;
+    overflow: hidden;
+    position: relative;
   }
 }
 .catalog__img img {
@@ -2484,6 +2490,12 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+@media (min-width: 768px) {
+  .catalog__img img {
+    transform: scale(1);
+    transition: 0.3s;
+  }
 }
 .catalog__title {
   display: block;

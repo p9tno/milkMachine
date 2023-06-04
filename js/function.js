@@ -134,6 +134,17 @@ $(document).ready(function() {
             $(this).toggleClass('active');
             $(this).find('.sub-menu').slideToggle();
         });
+
+        $(document).mouseup(function (e) {
+            let div = $(".header");
+            // если клик был не по нашему блоку и не по его дочерним элементам
+            if (!div.is(e.target) && div.has(e.target).length === 0) {
+                $('.catalogue__toggle').removeClass('active');
+                $('.catalogue__list').removeClass('active');
+                $('#wrapper').removeClass('catalogue-open');
+                $('body').removeClass('nav-open');
+            }
+        });
     }
     doCatalogue();
 
@@ -173,14 +184,6 @@ $(document).ready(function() {
         });
     };
     openMobileNav();
-
-    function activeNav() {
-        $('.menu-item').on('click', function() {
-            $('.menu-item').removeClass('current-menu-item');
-            $(this).addClass('current-menu-item');
-        })
-    };
-    activeNav();
 
     function showMore(classItem, btn) {
         // let classItem = '.vacancies__item';
