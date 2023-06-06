@@ -69,48 +69,31 @@ $(document).ready(function() {
     }
     addSliders();
 
-    function addSteps() {
+    const blog = new Swiper('.swiper_blog_js', {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        speed: 500,
+        loop: true,
+        autoHeight: true,
 
-        let steps = $('.steps-swiper-js');
-
-        steps.each(function() {
-            let options = $(this).data('options') || {};
-            let $parent = $(this).parent().parent();
-            let swiperDefaults = {
-
-                slidesPerView: 1,
-                spaceBetween: 10,
-                speed: 500,
-                loop: true,
-
-                pagination: {
-                    el: $parent.find('.steps__dotted')[0],
-                },
-
-                navigation: {
-                    nextEl: $parent.find('.icon_arrow_right')[0],
-                    prevEl: $parent.find('.icon_arrow_left')[0],
-                },
-
-                breakpoints: {
-                    768: {
-                        slidesPerView: 3,
-                        spaceBetween: 36,
-                    },
-                }
+        autoplay: {
+          delay: 5000,
+        },
 
 
-            };
+        navigation: {
+            nextEl: '.blog .icon_arrow_right',
+            prevEl: '.blog .icon_arrow_left',
+        },
 
-            let swiperOptions = $.extend(swiperDefaults, options),
-            mySwiper = new Swiper(this, swiperOptions);
+        breakpoints: {
+            768: {
+                spaceBetween: 35,
+                slidesPerView: 3,
+            },
+        },
 
-            // console.log($parent);
-            // console.log($parent.find('.steps__dotted')[0]);
-            // console.log($parent.closest('.projects__item').find('.projects-swiper-sm-js')[0]);
-        });
+    });
 
-    }
-    addSteps();
 
 });

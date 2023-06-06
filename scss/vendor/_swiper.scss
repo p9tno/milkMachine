@@ -66,7 +66,7 @@
     width: 18.75em;
     @media (min-width: 768px) {
         width: 111.875em;
-
+        z-index: 0;
     }
 
     display: flex;

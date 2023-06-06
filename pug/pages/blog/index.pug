@@ -1,0 +1,39 @@
+extends ../../layout/layout.pug
+
+block variable
+    -var path = '../../';
+
+block content
+
+    // begin breadcrumb
+    .breadcrumb.desktop 
+        .container_center
+            naw.woocommerce-breadcrumb
+                a(href="#") Главная
+                | Блог
+
+    // end breadcrumb
+
+    // begin blog
+    section#blog.blog.blog_archive.section
+        .container_center
+            h1.section__title
+                span Пишем статьи
+
+            .blog__grid
+
+                each item in [ {img: '1', title: 'Лучшая сельхозтехника для увеличения урожайности'}, {img: '2', title: 'Как современные технологии помогают сельскому хозяйству'}, {img: '3', title: 'Новейшие разработки в области сельхозтехники'},  {img: '1', title: 'Лучшая сельхозтехника для увеличения урожайности'}, {img: '2', title: 'Как современные технологии помогают сельскому хозяйству'}, {img: '3', title: 'Новейшие разработки в области сельхозтехники'},  {img: '1', title: 'Лучшая сельхозтехника для увеличения урожайности'}, {img: '2', title: 'Как современные технологии помогают сельскому хозяйству'}, {img: '3', title: 'Новейшие разработки в области сельхозтехники'},  {img: '1', title: 'Лучшая сельхозтехника для увеличения урожайности'}, {img: '2', title: 'Как современные технологии помогают сельскому хозяйству'}, {img: '3', title: 'Новейшие разработки в области сельхозтехники'}, ]
+
+                    .blog__item
+                        a(href="#").blog__img.img
+                            img(src="../../img/blog_"+item.img+".jpg", alt="alt")
+                        a(href="#").blog__title=item.title
+                        .blog__date 24 марта 2023
+
+
+            include ../../includes/pagination.pug
+
+
+
+
+    // end blog

@@ -1,0 +1,119 @@
+.pagination {
+    padding-top: 2.5em;
+    font-size: 0.5em;
+    @media (min-width: 768px) {
+        font-size: 1em;
+    }
+
+    .woocommerce-pagination {
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            li {
+                letter-spacing: 0.02em;
+                margin: 0 0.375em;
+
+                > * {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    width: 2.4em;
+                    height: 2.4em;
+                    border-radius: 0.875em;
+
+                    font-size: 1.25em;
+
+                    background-color: #F5F9F9;
+                    color: $color_primary;
+                    text-decoration: none;
+
+                    &.current,
+                    &:hover {
+                        background-color: $color_yellow;
+                        color: $color_white;
+                    }
+                }
+
+            }
+
+            .dots {
+                background-color: transparent;
+
+                &:hover {
+                    background-color: transparent;
+                    color: $color_primary;
+                }
+            }
+
+            .next,
+            .prev {
+                display: none;
+
+                @media (min-width: 768px) {
+                    display: flex;
+                    position: relative;
+                    width: auto;
+                    height: auto;
+                    font-weight: 500;
+                    background-color: transparent;
+
+                    &:hover {
+                        background-color: transparent;
+                        color: $color_yellow;
+                    }
+                }
+
+            }
+
+            @media (min-width: 768px) {
+                .prev {
+                    margin-right: 2.5em;
+
+                    &:before {
+                        font-family: $icon_font_family;
+                        content: '\e903';
+                        font-size: 0.5em;
+                        margin-right: 1em;
+                    }
+
+                    &:after {
+                        content: '';
+                        position: absolute;
+                        bottom: -0.25em;
+                        right: 0;
+                        width: 80%;
+                        border-bottom: 0.125em solid;
+                    }
+                }
+
+                .next {
+                    margin-left: 2.5em;
+
+                    &:before {
+                        content: '';
+                        position: absolute;
+                        bottom: -0.25em;
+                        left: 0;
+                        width: 84%;
+                        border-bottom: 0.125em solid;
+                    }
+
+                    &:after {
+
+                        font-family: $icon_font_family;
+                        content: '\e902';
+                        font-size: 0.5em;
+                        margin-left: 1em;
+                    }
+                }
+            }
+        }
+    }
+}

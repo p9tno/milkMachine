@@ -37,7 +37,8 @@
 	}
 
 	&:disabled {
-		color: red;
+		// color: red;
+		background-color: lighten($color_success, 10%);
 		cursor: not-allowed;
 		// pointer-events: none;
 	}

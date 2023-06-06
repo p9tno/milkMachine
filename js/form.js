@@ -33,7 +33,7 @@ function submitForm() {
         // Записываем значения полей форм. Обязателен атрибут name у полей с уникальным значением
         let formData = form.serialize();
 
-        
+
 
         // для счетчика (колличесто не заполненых полей)
         let empty = 0;
@@ -43,16 +43,23 @@ function submitForm() {
         fields.each(function (index, el) {
             // проверка заполнения полей. val - Метод позволяет получать и изменять значения элементов форм
             if ($(this).val() === '') {
-                $(this).addClass('invalid');
+                // $(this).addClass('invalid');
+                $(this).focus();
                 empty++;
             } else {
-                $(this).removeClass('invalid');
+                // $(this).removeClass('invalid');
             }
         });
 
-        setTimeout(function () {
-            fields.removeClass('invalid');
-        }, 1500);
+        // setTimeout(function () {
+        //     fields.removeClass('invalid');
+        // }, 1500);
+
+        function resetFields() {
+                fields.each(function (index, el) {
+                    $(this).val('');
+                })
+            }
 
 
         if (empty === 0) {
@@ -66,6 +73,7 @@ function submitForm() {
                 success: function (responce) {
                     // $('#success').modal('show');
                     console.log('success');
+                    resetFields();
                     modal.modal('show');
                     // Пример с перенаправлением на другую страницу
                     // document.location.href = "js.html";
@@ -79,6 +87,7 @@ function submitForm() {
                     },
                     error: function (responce) {
                         console.log('error');
+                        resetFields();
                         modal.modal('show');
                         message.html('Произошла ошибка при отправке. <br> Попробуйте отправить форму позже.');
                         // message.text('Произошла ошибка при отправке. <br> Попробуйте отправить форму позже.');
@@ -95,10 +104,10 @@ submitForm();
 function disabledButton() {
     $('.check_checked_js').on('change', function () {
         if ( $(this).prop('checked') ) {
-            $(this).closest('.form').find('.btn_didisabled_js').attr('disabled', false);
+            $(this).closest('.form').find('.btn_disabled_js').attr('disabled', false);
 
         } else {
-            $(this).closest('.form').find('.btn_didisabled_js').attr('disabled', true);
+            $(this).closest('.form').find('.btn_disabled_js').attr('disabled', true);
         }
     });
 

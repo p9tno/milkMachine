@@ -1,0 +1,68 @@
+// begin information
+section#information.information.information_form.section
+    .container_center
+        .information__wrap
+            .information__img.img.desktop
+                img(src="../../img/information_2.webp", alt="alt")
+            .information__img.img.mobile
+                img(src="../../img/information_2_sm.webp", alt="alt")
+
+            .information__content
+                h2.section__title
+                    span Поможем определиться с товаром
+                .information__subtitle Бесплатно проконсультируем по телефону и поможем с выбором
+                .information__list
+                    each item in ['Зададим несколько уточняющих вопросов и исходя из вашего бюджета и пожеланий подберём товар', 'Расскажем на чём можно сэкономить', 'Сориентируем по доставке или расскажем, где можно забрать товар', ]
+                        .information__item
+                            .mark
+                            span=item
+
+                .information__form
+                    form.form.form_grid(action="send.php")
+                        input(type="hidden" name="subject" value="форма в футоре")
+                        input(type="hidden" name="notspam" value="")
+
+                        .form__row
+                            .form__label Ваш номер телефона
+                            input.tel(type="text" required placeholder="+375(___) ___ - __ - __")
+
+                        .form__row
+                            .form__label.form__label_hide
+                                span Отправить
+                            button.btn.btn_disabled_js(type="submit") Перезвоните мне
+
+                        .form__row.form__row_full.mb_0
+                            .form__privacy
+                                label.form__check
+                                    input.check_checked_js(type="checkbox" checked="checked")
+                                    span Даю согласие на обработку моих <a href="#" target="_blank">персональных данных</a>
+
+                .information__action
+                    .information__messenger
+                        .messenger__label
+                            span Напишите нам, мы онлайн 
+                        .messenger__list
+                            .messenger__item
+                                a.messenger__link(href="https://wapp.click/7391205408" target="_blank")
+                                    i.icon_telegram
+                            .messenger__item
+                                a.messenger__link(href="https://wa.me/+" target="_blank")
+                                    i.icon_whatsapp
+                            .messenger__item
+                                a.messenger__link(href="viber://chat?number=%2B73912054081" target="_blank")
+                                    i.icon_viber
+
+                    .phone
+                        .phone__title Или позвоните
+                        .phone__label
+                            span Будние дни с 9:00-18:00
+                        .phone__link
+                            a(href="tel:+375 29 630 91 98") +375 29 630 91 98
+
+            .information__worker
+                .worker
+                    .worker__name Елена Бурдо
+                    .worker__info Менеджер по работе с клиентами
+
+
+// end information

@@ -1,50 +1,31 @@
-.breadcrumbs {
-	padding-bottom: 0;
+@media (min-width: 768px) {
+	.breadcrumb {
+		padding-top: 0.625em;
+		padding-bottom: 1.25em;
 
-	.kama_breadcrumbs {
-		a {
-			text-decoration: none;
-		}
+		.woocommerce-breadcrumb {
+			display: flex;
+			align-items: center;
+			letter-spacing: 0.02em;
+			font-size: 0.875em;
+			color: $color_success;
 
-		a,
-		span {
-			color: #B3B3B3;
-		}
+			a {
+				color: #739596;
+				text-decoration: none;
+				margin-right: 0.4em;
 
-		span {
-			// font-size: 0.6em;
-			@media (min-width: 768px) {
-				// font-size: 0.875em;
-			}
+				&:after {
+					display: inline-block;
+					content: '\e905';
+					font-family: $icon_font_family;
+					transform: translateY(-0.125em);
 
-			> a {
-				> span {
-					font-size: 1em;
+					font-size: 0.5em;
+					margin-left: 1em;
+
 				}
 			}
 		}
-
-		.kb_sep {
-			transform: translateY(-0.15em);
-			display: inline-block;
-			margin: 0 0.75em;
-
-			width: 0.3125em;
-			height: 0.3125em;
-			background-color: $color_warning;
-			font-size: 0.6em;
-			@media (min-width: 768px) {
-				font-size: 1em;
-
-			}
-
-		}
-
-		.kb_title {
-			color: $main_color;
-			font-weight: 600;
-		}
-
 	}
-
 }

@@ -1,4 +1,12 @@
 .phone {
+    &__title {
+        letter-spacing: 0.02em;
+        font-size: 0.75em;
+        @media (min-width: 768px) {
+            font-size: 0.875em;
+        }
+    }
+
     &__label {
         span {
             font-size: 0.75em;

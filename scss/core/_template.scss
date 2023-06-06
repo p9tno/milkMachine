@@ -51,6 +51,7 @@ body {
  ----------------------------------------------------------------------------- */
 .main_content {
 	flex-grow: 1;
+
 }
 
 .container_center {
@@ -80,7 +81,6 @@ body {
 		@media (min-width: 768px) {
 			margin: 0 0 2.5em;
 			line-height: 1.6;
-
 		}
 
 		span {
@@ -126,6 +126,34 @@ body {
 		height: 100%;
 		object-fit: cover;
 	}
+}
+
+.mark {
+	flex: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: rgba($color_success, 0.2);
+	border-radius: 0.75em;
+
+	width: 2em;
+	height: 2em;
+	@media (min-width: 768px) {
+		width: 2.5em;
+		height: 2.5em;
+
+	}
+
+	&:after {
+		content: '\e90a';
+		font-family: $icon_font_family;
+		font-size: 0.5em;
+		@media (min-width: 768px) {
+			font-size: 0.75em;
+
+		}
+	}
+
 }
 
 .snakeline {

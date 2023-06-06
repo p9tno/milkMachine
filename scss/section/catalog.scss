@@ -74,6 +74,7 @@
 
     &__item {
         position: relative;
+        // z-index: 200;
         background-color: $color_white;
         border: 0.0625em solid #F5F9F9;
         // border: 1px solid #000;
@@ -165,7 +166,7 @@
 
             @media (min-width: 768px) {
                 transform: scale(1);
-                transition: 0.3s;
+                transition: 0.5s;
             }
         }
     }

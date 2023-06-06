@@ -1,0 +1,101 @@
+.collapse {
+    &__title {
+        position: relative;
+        letter-spacing: 0.02em;
+        width: fit-content;
+        cursor: pointer;
+        font-weight: 600;
+        color: $color_success;
+
+        font-size: 0.75em;
+        @media (min-width: 768px) {
+            font-size: 1em;
+
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            display: inline-block;
+            width: 100%;
+            left: 0;
+            bottom: -0.75em;
+            border-bottom: 0.125em solid;
+            transition: width 0.3s;
+        }
+
+        &.open {
+            &:after {
+                width: 20%;
+            }
+        }
+
+    }
+
+    &__body {
+        display: none;
+
+        &.open {
+            display: block;
+        }
+    }
+}
+
+.content {
+    color: #739596;
+
+    &__title {
+        letter-spacing: 0.02em;
+        color: $main_color;
+        font-weight: 600;
+        font-family: $second_font_family;
+        font-size: 0.875em;
+        line-height: 1.6;
+        @media (min-width: 768px) {
+            font-size: 1.25em;
+
+        }
+    }
+
+    &__preview {
+        line-height: 1.5;
+        font-size: 0.75em;
+        @media (min-width: 768px) {
+            font-size: 1em;
+        }
+
+    }
+
+    &__collapse {}
+
+    &__content {
+        transition: 0.3s;
+        line-height: 1.5;
+        font-size: 0.75em;
+
+        @media (min-width: 768px) {
+            font-size: 1em;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-weight: 500;
+
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+
+        p {
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+
+    }
+
+}

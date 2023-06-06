@@ -237,13 +237,14 @@ $(document).ready(function() {
                 } else {
                     body.slideUp();
                 }
-            } else if (id === 'all') {
-                body.slideDown();
-                toggle.addClass('open');
-            } else {
-                body.slideToggle();
-                $(this).toggleClass('open');
             }
+            // else if (id === 'all') {
+            //     body.slideDown(800);
+            //     toggle.addClass('open');
+            // } else {
+            //     body.slideToggle(800);
+            //     $(this).toggleClass('open');
+            // }
         });
     }
     collapsed();
@@ -313,7 +314,7 @@ $(document).ready(function() {
     initSelect2();
 
     $(function(){
-        $(".tel").mask("+7 ( 9 9 9 ) - 9 9 9 - 9 9 - 9 9");
+        $(".tel").mask("+375(999) 999 - 99 - 99");
     });
 
     function initTwentytwenty () {
