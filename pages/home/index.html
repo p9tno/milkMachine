@@ -591,6 +591,150 @@
         </div>
       </div>
       <!-- End modal info-->
+      <!-- Begin Modal oneclick-->
+      <div class="modal fade oneclick" id="oneclick">
+        <div class="modal-dialog">
+          <div class="modal-content"><a class="modal-close" href="#" data-dismiss="modal"></a>
+            <div class="modal-header">
+              <div class="modal-title">Купить в один клик</div>
+              <div class="modal-subtitle">Оставьте заявку и мы свяжемся с вами в течение 5-10 минут</div>
+            </div>
+            <div class="modal-body">
+              <div class="modal-form">
+                <form class="form" action="send.php">
+                  <input type="hidden" name="subject" value="форма в футоре"/>
+                  <input type="hidden" name="notspam" value=""/>
+                  <div class="form__row">
+                    <div class="form__label">Ваш номер телефона</div>
+                    <input class="tel" type="text" required="required" placeholder="+375(___) ___ - __ - __"/>
+                  </div>
+                  <div class="form__row">
+                    <button class="btn btn_disabled_js" type="submit">Перезвоните мне</button>
+                  </div>
+                  <div class="form__row form__row_full mb_0">
+                    <div class="form__privacy">
+                      <label class="form__check">
+                        <input class="check_checked_js" type="checkbox" checked="checked"/><span>Даю согласие на обработку моих <a href="#" target="_blank">персональных данных</a></span>
+                      </label>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End modal oneclick-->
+      <!-- Begin Modal onlyphone-->
+      <div class="modal fade onlyphone" id="onlyphone">
+        <div class="modal-dialog">
+          <div class="modal-content"><a class="modal-close" href="#" data-dismiss="modal"></a>
+            <div class="modal-header">
+              <div class="modal-title">Только телефон и мы в деле</div>
+              <div class="modal-subtitle">Оставьте заявку и мы свяжемся с вами в течение 5-10 минут</div>
+            </div>
+            <div class="modal-body"> 
+              <div class="modal-form">
+                <form class="form" action="send.php">
+                  <input type="hidden" name="subject" value="форма в футоре"/>
+                  <input type="hidden" name="notspam" value=""/>
+                  <div class="form__row">
+                    <div class="form__label">Ваш номер телефона</div>
+                    <input class="tel" type="text" required="required" placeholder="+375(___) ___ - __ - __"/>
+                  </div>
+                  <div class="form__row">
+                    <button class="btn btn_disabled_js" type="submit">Перезвоните мне</button>
+                  </div>
+                  <div class="form__row form__row_full mb_0">
+                    <div class="form__privacy">
+                      <label class="form__check">
+                        <input class="check_checked_js" type="checkbox" checked="checked"/><span>Даю согласие на обработку моих <a href="#" target="_blank">персональных данных</a></span>
+                      </label>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End modal onlyphone-->
+      <!-- Begin Modal download-->
+      <div class="modal fade download" id="download">
+        <div class="modal-dialog">
+          <div class="modal-content"><a class="modal-close" href="#" data-dismiss="modal"></a>
+            <div class="modal-header">
+              <div class="modal-title">Пришлите реквизиты и мы выставим счёт на оплату</div>
+            </div>
+            <div class="modal-body">
+              <div class="modal-form">
+                <form class="form" action="send.php">
+                  <input type="hidden" name="subject" value="форма в футоре"/>
+                  <input type="hidden" name="notspam" value=""/>
+                  <div class="form__row">
+                    <label class="form__file" data-text="Файл не выбран">
+                      <input type="file" name="file"/>
+                      <p>Файл не выбран</p>
+                      <div class="form__btn"><span>Выбрать...</span></div>
+                    </label>
+                  </div>
+                  <div class="form__row">
+                    <div class="form__label">Ваш номер телефона</div>
+                    <input class="tel" type="text" required="required" placeholder="+375(___) ___ - __ - __"/>
+                  </div>
+                  <div class="form__row">
+                    <button class="btn btn_disabled_js" type="submit">Перезвоните мне</button>
+                  </div>
+                  <div class="form__row form__row_full mb_0">
+                    <div class="form__privacy">
+                      <label class="form__check">
+                        <input class="check_checked_js" type="checkbox" checked="checked"/><span>Даю согласие на обработку моих <a href="#" target="_blank">персональных данных</a></span>
+                      </label>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End modal download-->
+      <!-- Begin Modal addedcart-->
+      <div class="modal fade addedcart" id="addedcart">
+        <div class="modal-dialog">
+          <div class="modal-content"><a class="modal-close" href="#" data-dismiss="modal"></a>
+            <div class="modal-header">
+              <div class="modal-title">Товар добавлен в корзину</div>
+            </div>
+            <div class="modal-body">
+              <div class="catalog-item">
+                <div class="catalog-img img"><img src="../../img/addedcart.jpg" alt="alt"/></div>
+                <div class="catalog-price"><ins><span class="woocommerce-Price-amount amount">
+                      <bdi>2000 <span class="woocommerce-Price-currencySymbol">руб.<span></bdi></span></ins></div>
+                <div class="catalog-info">
+                  <div class="catalog-title">Доильный аппарат ТК 2-РК для коров</div>
+                  <div class="catalog-boolean">В наличии</div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer"><a class="btn" href="#" data-dismiss="modal">Продолжить покупки</a><a class="btn" href="#">Перейти в корзину</a></div>
+          </div>
+        </div>
+      </div>
+      <!-- End modal addedcart-->
+      <!-- Begin Modal wait-->
+      <div class="modal fade wait" id="wait">
+        <div class="modal-dialog">
+          <div class="modal-content"><a class="modal-close" href="#" data-dismiss="modal"></a>
+            <div class="modal-header">
+              <div class="modal-title">wait</div>
+            </div>
+            <div class="modal-body"> </div>
+            <div class="modal-footer"></div>
+          </div>
+        </div>
+      </div>
+      <!-- End modal wait-->
       <script src="../../js/jquery.js"></script>
       <script src="../../js/jquery.maskedinput.min.js"></script>
       <script src="../../js/modal.js"></script>

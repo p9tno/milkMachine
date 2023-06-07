@@ -33,6 +33,10 @@
                         transform: scale(1.4);
                     }
                 }
+
+                .subcategories__title {
+                    color: $color_success;
+                }
             }
         }
     }
@@ -92,7 +96,7 @@
         font-size: 0.75em;
         @media (min-width: 768px) {
             font-size: 1.25em;
-
+            transition: 0.3s;
         }
     }
 

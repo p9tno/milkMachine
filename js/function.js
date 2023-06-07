@@ -552,26 +552,26 @@ $(document).ready(function() {
     //     </label>
     // </div>
 
-    // function addNameFile() {
-    //     $('input[type="file"]').change(function (e) {
-    //         // console.log('change');
-    //         var text = $(this).closest('label').attr('data-text');
-    //         // var container = $(this).closest('.tab-item');
-    //         if (typeof e.target.files[0] == 'undefined') {
-    //             var fileName = text;
-    //             $(this).parent().removeClass('active');
-    //         } else {
-    //             var fileName = e.target.files[0].name;
-    //             $(this).parent().addClass('active');
-    //             fileName = fileName.substring(0, 20);
-    //             // console.log(fileName);
-    //         }
-    //         $(this).parent().find('p').text(fileName);
-    //         // console.log(fileName);
-    //         // container.find('[controlBtn_JS]').removeClass('disabled');
-    //     });
-    // }
-    // addNameFile();
+    function addNameFile() {
+        $('input[type="file"]').change(function (e) {
+            // console.log('change');
+            var text = $(this).closest('label').attr('data-text');
+            // var container = $(this).closest('.tab-item');
+            if (typeof e.target.files[0] == 'undefined') {
+                var fileName = text;
+                $(this).parent().removeClass('active');
+            } else {
+                var fileName = e.target.files[0].name;
+                $(this).parent().addClass('active');
+                fileName = fileName.substring(0, 20);
+                // console.log(fileName);
+            }
+            $(this).parent().find('p').text(fileName);
+            // console.log(fileName);
+            // container.find('[controlBtn_JS]').removeClass('disabled');
+        });
+    }
+    addNameFile();
     // --------------------------------------------------------------------
 
 

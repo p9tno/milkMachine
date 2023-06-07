@@ -20,7 +20,10 @@
 	}
 
 	&__row {
-		margin-bottom: 1em;
+		margin-bottom: 0.5em;
+		@media (min-width: 768px) {
+			margin-bottom: 1em;
+		}
 
 		.btn,
 		input:not([type]),
@@ -105,6 +108,50 @@
 				}
 			}
 		}
+	}
+
+	&__file {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+		height: 5em;
+		padding-left: 1.875em;
+		border-radius: 5em;
+		border: 0.0625em solid rgba(173, 202, 203, 0.3);
+
+		background-color: $color_white;
+		color: #ADCACB;
+
+		cursor: pointer;
+		font-size: 0.725em;
+		@media (min-width: 768px) {
+			font-size: 1em;
+
+		}
+
+		input {
+			display: none;
+			overflow: visible;
+			outline: 0;
+			margin: 0;
+		}
+
+		.form__btn {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			width: 9.25em;
+			height: 100%;
+			border-top-right-radius: 5em;
+			border-bottom-right-radius: 5em;
+
+			background-color: $color_success;
+			color: $color_white;
+
+		}
+
 	}
 
 	.btn {
