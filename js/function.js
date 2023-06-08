@@ -286,7 +286,7 @@ $(document).ready(function() {
         $('.select').select2({
             placeholder: $(this).data('placeholder'),
             minimumResultsForSearch: Infinity,
-            // templateSelection: addIcon,
+            templateSelection: addIcon,
         });
 
         // $('.select').on('change',function() {

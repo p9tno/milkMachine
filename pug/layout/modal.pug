@@ -140,10 +140,38 @@
 // Begin Modal wait
 .modal.fade.wait#wait
     .modal-dialog
-        .modal-content
+        .modal-content.bg
             a(href="#" class="modal-close" data-dismiss="modal")
             .modal-header
-                .modal-title wait
-            .modal-body 
-            .modal-footer
+                .modal-title Подождите! Не уходите с пустыми руками
+                .modal-subtitle Скачайте чек-лист и узнайте как выбрать доильный аппарат
+            .modal-body
+                .modal-form
+                    form.form(action="send.php")
+                        input(type="hidden" name="subject" value="форма в футоре")
+                        input(type="hidden" name="notspam" value="")
+
+                        .form__row
+                            <div class="form__label"><span>Куда прислать?</span></div>
+                                <select class="select" name="messenger" data-placeholder="Whatsapp">
+                                    <option value=""></option>
+                                    <option value="whatsapp" selected="selected">Whatsapp</option>
+                                    <option value="Viber">Viber</option>
+                                    <option value="Telegram">Telegram</option>
+                                </select>
+
+
+                        .form__row
+                            .form__label Ваш номер телефона
+                            input.tel(type="text" name="phone" required placeholder="+375(___) ___ - __ - __")
+
+                        .form__row
+                            button.btn.btn_disabled_js(type="submit") Cкачать чек-лист
+
+                        .form__row.form__row_full.mb_0
+                            .form__privacy
+                                label.form__check
+                                    input.check_checked_js(type="checkbox" checked="checked")
+                                    span Даю согласие на обработку моих <a href="#" target="_blank">персональных данных</a>
+
 // End modal wait

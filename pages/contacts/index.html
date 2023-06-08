@@ -530,12 +530,41 @@
       <!-- Begin Modal wait-->
       <div class="modal fade wait" id="wait">
         <div class="modal-dialog">
-          <div class="modal-content"><a class="modal-close" href="#" data-dismiss="modal"></a>
+          <div class="modal-content bg"><a class="modal-close" href="#" data-dismiss="modal"></a>
             <div class="modal-header">
-              <div class="modal-title">wait</div>
+              <div class="modal-title">Подождите! Не уходите с пустыми руками</div>
+              <div class="modal-subtitle">Скачайте чек-лист и узнайте как выбрать доильный аппарат</div>
             </div>
-            <div class="modal-body"> </div>
-            <div class="modal-footer"></div>
+            <div class="modal-body">
+              <div class="modal-form">
+                <form class="form" action="send.php">
+                  <input type="hidden" name="subject" value="форма в футоре"/>
+                  <input type="hidden" name="notspam" value=""/>
+                  <div class="form__row"><div class="form__label"><span>Куда прислать?</span></div>
+<select class="select" name="messenger" data-placeholder="Whatsapp">
+<option value=""></option>
+<option value="whatsapp" selected="selected">Whatsapp</option>
+<option value="Viber">Viber</option>
+<option value="Telegram">Telegram</option>
+</select>
+                  </div>
+                  <div class="form__row">
+                    <div class="form__label">Ваш номер телефона</div>
+                    <input class="tel" type="text" name="phone" required="required" placeholder="+375(___) ___ - __ - __"/>
+                  </div>
+                  <div class="form__row">
+                    <button class="btn btn_disabled_js" type="submit">Cкачать чек-лист</button>
+                  </div>
+                  <div class="form__row form__row_full mb_0">
+                    <div class="form__privacy">
+                      <label class="form__check">
+                        <input class="check_checked_js" type="checkbox" checked="checked"/><span>Даю согласие на обработку моих <a href="#" target="_blank">персональных данных</a></span>
+                      </label>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
           </div>
         </div>
       </div>

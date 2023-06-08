@@ -390,9 +390,54 @@
 }
 
 .wait {
+    .modal-dialog {
+        @media (min-width: 768px) {
+            width: 59.375em;
+        }
+    }
+
+    .modal-content {
+        background-image: url("../../img/wait.webp");
+        @media (max-width: 767px) {
+            background-position: inherit;
+        }
+
+        @media (min-width: 768px) {
+            padding: 4.375em;
+        }
+    }
+
+    .modal-header {
+        text-align: left;
+        @media (min-width: 768px) {
+            width: 28.75em;
+        }
+    }
+
     .modal-form {
         @media (min-width: 768px) {
-            margin-top: 5.3125em;
+            margin-top: 4.25em;
+            width: 24.375em;
+        }
+
+        .form {
+            input:not([type]),
+            input[type=date],
+            input[type=email],
+            input[type=number],
+            input[type=password],
+            input[type=search],
+            input[type=tel],
+            input[type=text],
+            input[type=url],
+            textarea {
+                border: 0;
+
+            }
+
+            .form__row {
+                margin-bottom: 0.5em;
+            }
         }
     }
 }
