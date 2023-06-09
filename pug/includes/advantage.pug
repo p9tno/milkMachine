@@ -1,0 +1,13 @@
+// begin advantage
+section#advantage.advantage.section
+    .container_center
+        .advantage__list
+            each item in [ {img: '1', title: 'Прямые поставки от производителя', text: 'Доставляем товар напрямую от Турецкого производителя Melasty'}, {img: '2', title: 'Доставим товар за 1-3 дня', text: 'Службой доставки или сможете забрать товар сами у нас со склада'}, {img: '3', title: 'Личный менеджер на связи с вами 24/7', text: 'Стараемся дать вам лучший сервис и профессионализм от нашей команды'}, {img: '4', title: 'Гарантия на товар от 12 до 60 месяцев', text: 'В течение этого срока сможем отремонтировать или обменять товар на другой'} ]
+
+                .advantage__item
+                    .advantage__img.img
+                        img(src="../../img/advantage_"+item.img+".png", alt="alt")
+                    .advantage__title=item.title
+                    .advantage__text=item.text
+
+// end advantage

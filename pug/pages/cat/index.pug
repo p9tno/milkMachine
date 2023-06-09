@@ -1,0 +1,71 @@
+extends ../../layout/layout.pug
+
+block variable
+    -var path = '../../';
+
+
+    //- include ../../includes/information.pug
+    //- include ../../includes/pagination.pug
+
+    //- (style="background-image: url('../../img/preview_bg.webp')")
+
+
+block content
+    // begin breadcrumb
+    .breadcrumb.desktop 
+        .container_center
+            naw.woocommerce-breadcrumb
+                a(href="#") Главная
+                | Доильные аппараты и комплектующие
+
+    // end breadcrumb
+
+    // begin catalog
+    section#catalog.catalog.section
+        .container_center
+            h1.section__title.section__title_lg
+                span Доильные аппараты и комплектующие
+
+            .catalog__cat
+                ul.cat-list
+                    li.cat-item.current-cat
+                        a(href="#") Доильные аппараты для коров
+
+                    li.cat-item
+                        a(href="#") Доильные аппараты для коз и овец
+
+                    li.cat-item
+                        a(href="#") Комплектующие к доильным аппаратам
+
+
+            .catalog__grid
+                each item in ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '' ]
+                    //- start catalog__item
+                    .catalog__item
+
+                        a(href="#").catalog__img
+                            img(src="../../img/catalog.jpg", alt="alt")
+                        a(href="#").catalog__title Доильный аппарат ТК 2-РК для коров
+                        .catalog__boolean В наличии
+                        .catalog__price
+                            ins
+                                span.woocommerce-Price-amount.amount
+                                    bdi 2000 <span class="woocommerce-Price-currencySymbol">руб.<span>
+
+                        .catalog__btn
+                            a.btn(href="#") В корзину
+
+                    //- end catalog__item
+
+            include ../../includes/pagination.pug
+
+
+
+
+    // end catalog
+
+    include ../../includes/advantage.pug
+
+    include ../../includes/information.pug
+
+    include ../../includes/content.pug

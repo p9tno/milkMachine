@@ -121,6 +121,28 @@ $(document).ready(function() {
     }
     showModal();
 
+    function showWaitModal() {
+        setTimeout(function () {
+            $('#wait').modal('show');
+        }, 30000);
+
+        // console.log('wait local: ', localStorage.getItem('wait'));
+        //
+        // if (localStorage.getItem('wait') == 'disable') {
+        //     console.log('test');
+        // } else {
+        //     setTimeout(function () {
+        //         $('#wait').modal('show');
+        //     }, 3000);
+        //
+        //     $('#wait').on('click', function() {
+        //         localStorage.setItem('wait', 'disable');
+        //     })
+        // }
+        // localStorage.clear();
+    };
+    // showWaitModal();
+
     function doCatalogue() {
         $('.catalogue__btn').click(function(event) {
             $(this).find('.catalogue__toggle').toggleClass('active');

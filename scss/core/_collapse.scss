@@ -1,0 +1,21 @@
+.collapse {
+    &__title {
+        &.open {
+            // .content__toggle {
+            //     &:after {
+            //         width: 20%;
+            //     }
+            //
+            // }
+        }
+
+    }
+
+    &__body {
+        display: none;
+
+        &.open {
+            display: block;
+        }
+    }
+}

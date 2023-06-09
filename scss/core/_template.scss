@@ -90,6 +90,18 @@ body {
 
 			}
 		}
+
+		&_lg {
+			@media (min-width: 768px) {
+				margin-bottom: 1.75em;
+			}
+
+			span {
+				@media (min-width: 768px) {
+					font-size: 3em;
+				}
+			}
+		}
 	}
 }
 

@@ -61,7 +61,11 @@
                 margin-bottom: 0;
             }
         }
+
+        border-top: 0.125em solid #F5F9F9;
+        padding-top: 1.25em;
         @media (min-width: 768px) {
+            padding-top: 2.5em;
             display: grid;
             grid-template-columns: repeat(4,1fr);
             grid-gap: 1.875em;
@@ -74,10 +78,8 @@
 
     &__item {
         position: relative;
-        // z-index: 200;
         background-color: $color_white;
         border: 0.0625em solid #F5F9F9;
-        // border: 1px solid #000;
         border-radius: 1.25em;
 
         padding: 1.875em 0.9375em;
@@ -268,32 +270,167 @@
         }
     }
 
+    &__cat {
+        padding: 1.75em 0 0.875em;
+        border-top: 0.125em solid #F5F9F9;
+        border-left: 0;
+        border-right: 0;
+
+        .cat-list {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+
+            @media (min-width: 768px) {
+                display: flex;
+                flex-wrap: wrap;
+                margin: 0 -0.9375em;
+            }
+        }
+
+        .cat-item {
+            margin-bottom: 0.25em;
+
+            @media (min-width: 768px) {
+                margin: 0 1em 1em;
+                width: calc(33.3% - 2em);
+
+                &:nth-child(3n+2) {
+                    text-align: center;
+                }
+
+                &:nth-child(3n+3) {
+                    text-align: right;
+                }
+            }
+
+            a {
+                position: relative;
+                color: #ADCACB;
+                letter-spacing: 0.02em;
+                font-size: 0.875em;
+                line-height: 1.4;
+
+                @media (min-width: 768px) {
+                    line-height: 1.6;
+                    font-size: 1.25em;
+                    text-decoration: none;
+
+                    &:after {
+                        content: '';
+                        position: absolute;
+                        display: inline-block;
+                        width: 100%;
+                        left: 0;
+                        bottom: -0.125em;
+                        border-bottom: 0.0625em solid;
+                        border-color: inherit;
+
+                        transition: width 0.3s;
+
+                    }
+
+                    &:hover {
+                        color: $color_green;
+
+                        &:after {
+                            width: 80%;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+
+    &__filter {
+        border-top: 0.125em solid #F5F9F9;
+
+        padding: 1.25em 0 0;
+        @media (min-width: 768px) {
+            padding: 1.75em 0;
+        }
+
+        .cat-list {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+
+            display: flex;
+
+            font-size: 0.5em;
+
+            @media (max-width: 767px) {
+                position: relative;
+                overflow-x: auto;
+                overflow-y: hidden;
+                margin-bottom: 1em;
+                padding-bottom: 1.5em;
+
+            }
+
+            @media (min-width: 768px) {
+                flex-wrap: wrap;
+                gap: 0.75em;
+                font-size: 1em;
+
+            }
+
+        }
+
+        .cat-item {
+            width: fit-content;
+            flex: none;
+
+            @media (max-width: 767px) {
+                margin-right: 0.9375em;
+
+                &:last-child {
+                    margin-right: 0;
+                    padding-right: 0.0625em;
+                }
+
+            }
+
+            input {
+                display: none;
+
+                &:checked ~ label {
+                    color: $color_white;
+                    background-color: $color_green;
+                }
+            }
+
+            label {
+                display: block;
+                padding: 1.625em 2.624em;
+
+                color: $color_primary;
+                border: 0;
+                background-color: #F5F9F9;
+                border-radius: 4em;
+
+                font-weight: 400;
+                line-height: 1;
+                cursor: pointer;
+                transition: 0.3s;
+
+                span {
+                    font-size: 1.25em;
+                    letter-spacing: 0.02em;
+                }
+
+            }
+
+            &:hover {
+                label {
+                    color: $color_white;
+                    background-color: $color_green;
+
+                }
+            }
+        }
+
+    }
+
 }
-
-.section {
-    &__title {}
-
-}
-
-.container_center {}
-
-.swiper {
-    &__arrows {}
-
-}
-
-.swiper_catalog_js {}
-
-.swiper-wrapper {}
-
-.swiper-slide {}
-
-.woocommerce-Price-amount {}
-
-.amount {}
-
-.woocommerce-Price-currencySymbol {}
-
-.icon_arrow_left {}
-
-.icon_arrow_right {}

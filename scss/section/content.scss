@@ -1,5 +1,7 @@
-.collapse {
-    &__title {
+.content {
+    color: #739596;
+
+    &__toggle {
         position: relative;
         letter-spacing: 0.02em;
         width: fit-content;
@@ -10,7 +12,6 @@
         font-size: 0.75em;
         @media (min-width: 768px) {
             font-size: 1em;
-
         }
 
         &:after {
@@ -24,25 +25,7 @@
             transition: width 0.3s;
         }
 
-        &.open {
-            &:after {
-                width: 20%;
-            }
-        }
-
     }
-
-    &__body {
-        display: none;
-
-        &.open {
-            display: block;
-        }
-    }
-}
-
-.content {
-    color: #739596;
 
     &__title {
         letter-spacing: 0.02em;
@@ -65,8 +48,6 @@
         }
 
     }
-
-    &__collapse {}
 
     &__content {
         transition: 0.3s;
@@ -96,6 +77,20 @@
             }
         }
 
+    }
+
+}
+
+.collapse {
+    &__title {
+        &.open {
+            .content__toggle {
+                &:after {
+                    width: 20%;
+                }
+
+            }
+        }
     }
 
 }
