@@ -1,0 +1,7 @@
+.delivery {
+    &__content {
+        @media (min-width: 768px) {
+            width: 62.5em;
+        }
+    }
+}

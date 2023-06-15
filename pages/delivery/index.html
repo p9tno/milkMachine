@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="css/aos.css"/>
-    <link rel="stylesheet" type="text/css" href="css/fancybox.min.css"/>
-    <link rel="stylesheet" type="text/css" href="css/jquery-ui.css"/>
-    <link rel="stylesheet" type="text/css" href="css/swiper-bundle.min.css"/>
-    <link rel="stylesheet" type="text/css" href="css/twentytwenty.css"/>
-    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="../../css/aos.css"/>
+    <link rel="stylesheet" type="text/css" href="../../css/fancybox.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../../css/jquery-ui.css"/>
+    <link rel="stylesheet" type="text/css" href="../../css/swiper-bundle.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../../css/twentytwenty.css"/>
+    <link rel="stylesheet" type="text/css" href="../../css/style.css"/>
   </head>
   <body>
     <div class="wrapper" id="wrapper">
@@ -94,82 +94,58 @@
         </div>
       </header>
       <main class="main_content">
-        <!-- begin projectNaw-->
-        <section class="projectNaw section" id="projectNaw">
+        <!-- begin breadcrumb-->
+        <div class="breadcrumb desktop"> 
           <div class="container_center">
-            <h2 class="section__title"><span>Навигация по проекту</span></h2>
-            <ul style="font-size:1.25em;">
-              <li><a href="../pages/home/">Главная </a></li>
-              <li><a href="../pages/cat/">Категория </a></li>
-              <li><a href="../pages/subcat/">Подкатегория </a></li>
-              <li><a href="../pages/blog/">Блог (архив) </a></li>
-              <li><a href="../pages/product/">Карточка продукта</a></li>
-              <li><a href="../pages/product2/">Карточка продукта (под заказ)</a></li>
-              <li><a href="../pages/product3/">Карточка продукта (скидка)</a></li>
-              <li><a href="../pages/promotions/">Акции</a></li>
-              <li><a href="../pages/searchpage/">Страница поиска</a></li>
-              <li><a href="../pages/delivery/">Доставка (Транспортной компанией)</a></li>
-            </ul>
+            <naw class="woocommerce-breadcrumb"><a href="#">Главная</a>Доставка</naw>
           </div>
-        </section>
-        <!-- end projectNaw-->
-        <!-- begin testmodal-->
-        <section class="testmodal section" id="testmodal">
+        </div>
+        <!-- end breadcrumb-->
+        <!-- begin delivery-->
+        <section class="delivery section" id="delivery">
           <div class="container_center">
-            <h2 class="section__title"><span>модальные окна</span></h2>
-            <div class="testmodal__content"><a class="btn show_modal_js" href="#oneclick">Купить в один клик</a><br/><br/><a class="btn show_modal_js" href="#onlyphone">Только телефон и мы в деле</a><br/><br/><a class="btn show_modal_js" href="#download">Пришлите реквизиты</a><br/><br/><a class="btn show_modal_js" href="#addedcart">Товар добавлен в корзину</a><br/><br/><a class="btn show_modal_js" href="#wait">Подождите!</a></div>
-          </div>
-        </section>
-        <!-- end testmodal-->
-        <!-- begin testCart-->
-        <section class="testCart section" id="testCart">
-          <div class="container_center">
-            <h2 class="section__title"><span>Пример карточек товара</span></h2>
-            <div class="catalog__grid">
-              <div class="catalog__item"><a class="catalog__img" href="#"><img src="../../img/catalog.jpg" alt="alt"/></a><a class="catalog__title" href="#">Доильный аппарат ТК 2-РК для коров</a>
-                <div class="catalog__boolean">В наличии</div>
-                <div class="catalog__price"><ins><span class="woocommerce-Price-amount amount">
-                      <bdi>2000 <span class="woocommerce-Price-currencySymbol">руб.<span></bdi></span></ins></div>
-                <div class="catalog__btn"><a class="btn" href="#">В корзину</a></div>
-              </div>
-              <div class="catalog__item">
-                <div class="catalog__info"> <span>Хит продаж</span></div><a class="catalog__img" href="#"><img src="../../img/catalog.jpg" alt="alt"/></a><a class="catalog__title" href="#">Доильный аппарат ТК 2-РК для коров</a>
-                <div class="catalog__boolean">В наличии</div>
-                <div class="catalog__price"><ins><span class="woocommerce-Price-amount amount">
-                      <bdi>2000 <span class="woocommerce-Price-currencySymbol">руб.<span></bdi></span></ins></div>
-                <div class="catalog__btn"><a class="btn" href="#">В корзину</a></div>
-              </div>
-              <div class="catalog__item new">
-                <div class="catalog__info"> <span>Новинка</span></div><a class="catalog__img" href="#"><img src="../../img/catalog.jpg" alt="alt"/></a><a class="catalog__title" href="#">Доильный аппарат ТК 2-РК для коров</a>
-                <div class="catalog__boolean">В наличии</div>
-                <div class="catalog__price"><ins><span class="woocommerce-Price-amount amount">
-                      <bdi>2000 <span class="woocommerce-Price-currencySymbol">руб.<span></bdi></span></ins></div>
-                <div class="catalog__btn"><a class="btn" href="#">В корзину</a></div>
-              </div>
-              <div class="catalog__item"><a class="catalog__img" href="#"><img src="../../img/catalog.jpg" alt="alt"/></a><a class="catalog__title" href="#">Доильный аппарат ТК 2-РК для коров</a>
-                <div class="catalog__boolean false">Под заказ</div>
-                <div class="catalog__price"><ins><span class="woocommerce-Price-amount amount">
-                      <bdi>2000 <span class="woocommerce-Price-currencySymbol">руб.<span></bdi></span></ins></div>
-                <div class="catalog__btn"><a class="btn" href="#">В корзину</a></div>
-              </div>
-              <div class="catalog__item sale">
-                <div class="catalog__info"> <span>-25%</span></div><a class="catalog__img" href="#"><img src="../../img/catalog.jpg" alt="alt"/></a><a class="catalog__title" href="#">Доильный аппарат ТК 2-РК для коров</a>
-                <div class="catalog__boolean">В наличии</div>
-                <div class="catalog__price"><ins><span class="woocommerce-Price-amount amount">
-                      <bdi>2000 <span class="woocommerce-Price-currencySymbol">руб.<span></bdi></span></ins>
-                  <del><span class="woocommerce-Price-amount amount">
-                      <bdi>2000 <span class="woocommerce-Price-currencySymbol">руб.<span></bdi></span></del>
+            <h1 class="section__title section__title_lg"><span>Способы доставки</span></h1>
+            <div class="delivery__content">
+              <div class="tabs__wrapper">
+                <div class="tabs">
+                  <div class="tab">Транспортной компанией</div>
+                  <div class="tab">Самовывоз с нашего склада</div>
+                  <div class="tab">Регионы доставки</div>
                 </div>
-                <div class="catalog__btn"><a class="btn" href="#">В корзину</a></div>
+                <div class="tabs__content">
+                  <div class="tab__item">
+                    <div class="tab__text">
+                      <p>Вы сообщаете о необходимости доставки до Вашего города и мы включаем транспортные расходы в цену, сами ищем и нанимаем транспорт по оптимальной ставке, предварительно согласовав ставку с Вами. Условия доставки товаров: : — Доставка осуществляется только заказанных товаров. Транспортировка нескольких товаров с целью выбора одного из них на месте доставки не производится. — При согласовании даты доставки Покупатель обязуется находиться по указанному им адресу — Доставка осуществляется организацией-подрядчиком, определяемой Продавцом. — Доставка может производиться до дверей Покупателя либо до пунктов самовывоза транспортных компаний, согласованных заранее с Покупателем. — В обязанности курьеров не входит консультация по эксплуатации и характеристикам товара, его установка и настройка. В случае необходимости, информацию о товаре можно получить на сайте или у специалиста по телефонам, указанным на сайте.</p>
+                    </div>
+                  </div>
+                  <div class="tab__item">
+                    <div class="tab__text">
+                      <p>Если у Вас есть свои машины или свои перевозчики, Вы можете забрать оборудование с нашего склада. Адрес нашего склада: 213828 Республика Беларусь, Могилевская область, г.Бобруйск, ул.Октябрьская 149а. Рабочие дни: понедельник-пятница с 9.00 до 18.00 Выходные дни: суббота-воскресенье Возможна загрузка в более позднее время по согласованию.</p>
+                    </div>
+                  </div>
+                  <div class="tab__item">
+                    <div class="tab__text">
+                      <ul>
+                        <li>Азербайджан, все регионы</li>
+                        <li>Молдова, все регионы</li>
+                        <li>Армения, все регионы</li>
+                        <li>Россия, все регионы</li>
+                        <li>Беларусь, все регионы</li>
+                        <li>Таджикистан, все регионы</li>
+                        <li>Грузия, все регионы</li>
+                        <li>Туркменистан, все регионы</li>
+                        <li>Казахстан, все регионы</li>
+                        <li>Узбекистан, все регионы</li>
+                        <li>Кыргызстан, все регионы</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </section>
-        <!-- end testCart-->
-        <!-- begin projectBtn-->
-        <!-- end projectBtn-->
-        <!-- begin projectModal-->
-        <!-- end projectModal-->
+        <!-- end delivery-->
       </main>
       <footer class="footer">
         <div class="footer__top">
@@ -463,21 +439,21 @@
         </div>
       </div>
       <!-- End modal wait-->
-      <script src="js/jquery.js"></script>
-      <script src="js/jquery.maskedinput.min.js"></script>
-      <script src="js/modal.js"></script>
-      <script src="js/swiper-bundle.min.js"></script>
-      <script src="js/slider.js"></script>
-      <script src="js/select2.min.js"></script>
-      <script src="js/jquery.event.move.js"></script>
-      <script src="js/jquery.twentytwenty.js"></script>
-      <script src="js/jquery.marquee.min.js"></script>
-      <script src="js/aos.js"></script>
-      <script src="js/fancybox.min.js"></script>
-      <script src="js/jquery-ui.min.js"></script>
-      <script src="js/jquery-ui-touch-punch.js"></script>
-      <script src="js/form.js"></script>
-      <script src="js/function.js"></script>
+      <script src="../../js/jquery.js"></script>
+      <script src="../../js/jquery.maskedinput.min.js"></script>
+      <script src="../../js/modal.js"></script>
+      <script src="../../js/swiper-bundle.min.js"></script>
+      <script src="../../js/slider.js"></script>
+      <script src="../../js/select2.min.js"></script>
+      <script src="../../js/jquery.event.move.js"></script>
+      <script src="../../js/jquery.twentytwenty.js"></script>
+      <script src="../../js/jquery.marquee.min.js"></script>
+      <script src="../../js/aos.js"></script>
+      <script src="../../js/fancybox.min.js"></script>
+      <script src="../../js/jquery-ui.min.js"></script>
+      <script src="../../js/jquery-ui-touch-punch.js"></script>
+      <script src="../../js/form.js"></script>
+      <script src="../../js/function.js"></script>
     </div>
   </body>
 </html>

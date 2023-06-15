@@ -1,0 +1,140 @@
+extends ../../layout/layout.pug
+
+block variable
+    -var path = '../../';
+
+block content
+
+    // begin breadcrumb
+    .breadcrumb.desktop 
+        .container_center
+            naw.woocommerce-breadcrumb
+                a(href="#") Главная
+                a(href="#") Доильные аппараты и комплектующие
+                a(href="#") Доильные аппараты для коров
+                | Доильный аппарат ТК 2-РК для коров
+
+    // end breadcrumb
+
+    // begin product
+    section#product.product.section
+        .container_center
+            h1.section__title.section__title_lg.desktop
+                span Доильный аппарат ТК 2-РК для коров
+            .product__top
+
+                .product__left
+                    .swiper.swiper_product_js
+                        .swiper-wrapper
+                            each item in ['', '', '', '' ]
+                                .swiper-slide
+                                    .product__img.img
+                                        img(src="../../img/product.jpg" alt="alt")
+
+                        .swiper__dotted
+                    .swiper__arrows.arrows_product_js
+                        i.icon_arrow_left
+                        i.icon_arrow_right
+
+                .product__right
+
+                    h1.section__title.section__title_lg.mobile
+                        span Доильный аппарат ТК 2-РК для коров
+                    .product__boolean В наличии
+
+                    .product__price
+                        ins
+                            span.woocommerce-Price-amount.amount
+                                bdi 2000 <span class="woocommerce-Price-currencySymbol">руб.<span>
+
+                    .product__btn
+                        a.btn(href="#") Добавить в корзину
+
+                    .product__click
+                        a.btn.btn_primary.show_modal_js(href="#oneclick") Оформить заказ в 1 клик
+
+                    ul.product__advantage
+                        each item in [{img: '1', text: 'Гарантия на товар 24 месяца'}, {img: '2', text: 'Безопасная оплата онлайн'}, {img: '3', text: 'Доставка курьером за 1-3 дня '}, {img: '4', text: 'Возможность вазврата в течение 14 дней'}, ]
+                            li.product__advantage_item
+                                .product__advantage_img.img
+                                    img(src="../../img/ad_"+item.img+".png", alt="alt")
+                                span=item.text
+
+
+            .product__bottom
+
+                .tabs__wrapper
+
+                    .tabs
+                        .tab Описание
+                        .tab Характеристики
+                        .tab Доставка
+                        .tab Оплата
+                        .tab Возврат
+
+                    .tabs__content
+                        .tab__item
+                            include ../../tabs/desc.pug
+
+                        .tab__item
+                            include ../../tabs/attributes.pug
+
+                        .tab__item
+                            include ../../tabs/delivery.pug
+
+                        .tab__item
+                            include ../../tabs/payment.pug
+
+                        .tab__item
+                            include ../../tabs/return.pug
+
+
+    // end product
+
+    // begin catalog
+    section.catalog.section
+        .container_center
+
+            .catalog__caption
+                h2.section__title
+                    span С этим товаром покупают
+                .catalog__more.desktop.snakeline
+                    a(href="#") Cмотреть все товары
+
+            .catalog__slider
+                .swiper.swiper_catalog_js
+                    .swiper-wrapper
+                        each item in ['', '', '', '', '', '', '', '' ]
+                            .swiper-slide
+
+                                //- start catalog__item
+                                .catalog__item.new
+
+                                    a(href="#").catalog__img
+                                        img(src="../../img/catalog.jpg", alt="alt")
+                                    a(href="#").catalog__title Доильный аппарат ТК 2-РК для коров
+                                    .catalog__boolean В наличии
+                                    .catalog__price
+                                        ins
+                                            span.woocommerce-Price-amount.amount
+                                                bdi 2000 <span class="woocommerce-Price-currencySymbol">руб.<span>
+
+                                    .catalog__btn
+                                        a.btn(href="#") В корзину
+
+                                //- end catalog__item
+
+
+
+                .swiper__arrows
+                    i.icon_arrow_left
+                    i.icon_arrow_right
+
+            .catalog__more.mobile
+                a(href="#") Cмотреть все товары
+
+
+    // end catalog
+
+    include ../../includes/information.pug
+    include ../../includes/content.pug

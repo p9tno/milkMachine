@@ -22,6 +22,27 @@ $(document).ready(function() {
 
     });
 
+    const product = new Swiper('.swiper_product_js', {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        speed: 400,
+        loop: true,
+        autoplay: {
+          delay: 5000,
+        },
+
+        navigation: {
+            nextEl: '.arrows_product_js .icon_arrow_right',
+            prevEl: '.arrows_product_js .icon_arrow_left',
+        },
+        pagination: {
+            el: '.swiper__dotted',
+            clickable: true,
+        },
+
+
+    });
+
 
     function addSliders() {
 

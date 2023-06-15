@@ -36,6 +36,21 @@
 		}
 	}
 
+	&_primary {
+		background-color: #F5F9F9;
+		color: $color_primary;
+
+		@media (min-width: 768px) {
+			&:hover {
+				background-color: darken(#F5F9F9, 3%);
+			}
+
+			&:active {
+				background-color: #F5F9F9;
+			}
+		}
+	}
+
 	&:disabled {
 		// color: red;
 		background-color: lighten($color_success, 10%);

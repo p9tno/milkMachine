@@ -1,0 +1,15 @@
+.tab__attributes
+    .attributes
+        .attributes__item
+            .attributes__label
+                span Вес
+                i.icon_question
+                    p Вид животных, для которых используется данное оборудование.
+
+            .attributes__value 60 кг
+
+        each item in [ {label: 'Страна производитель' , value: 'Турция'}, {label: 'Производитель' , value: 'Melasty'}, {label: 'Вид животных' , value: 'Коровы'}, {label: 'Тип установки оборудования' , value: 'Переносной'}  ]
+            .attributes__item
+                .attributes__label
+                    span=item.label
+                .attributes__value=item.value

@@ -433,4 +433,26 @@
 
     }
 
+    &__results {
+        color: $color_primary;
+        line-height: 2;
+        padding: 0 0 1em;
+
+        font-size: 0.75em;
+        @media (min-width: 768px) {
+            display: flex;
+            font-size: 0.875em;
+            padding: 1.43em 0;
+        }
+    }
+
+    &__request {}
+
+    &__found {
+        @media (min-width: 768px) {
+            margin-left: 0.875em;
+
+        }
+    }
+
 }

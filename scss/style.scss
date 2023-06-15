@@ -23,7 +23,7 @@
 @import 'core/pagination';
 
 // @import 'core/video';
-// @import 'core/tabs';
+@import 'core/tabs';
 // @import 'core/drop';
 
 @import 'section/preview';
@@ -33,6 +33,8 @@
 @import 'section/information';
 @import 'section/blog';
 @import 'section/content';
+@import 'section/product';
+@import 'section/delivery';
 
 @import 'vendor/modal';
 @import 'vendor/swiper';

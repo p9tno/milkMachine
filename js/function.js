@@ -254,6 +254,7 @@ $(document).ready(function() {
                 // $('[data-collapse-wrapper]').removeClass('open');
                 body = $(this).parent().find('[data-collapse-body]');
                 $(this).toggleClass('open');
+                body.toggleClass('active');
                 if ($(this).hasClass('open')) {
                     body.slideDown();
                 } else {

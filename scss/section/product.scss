@@ -1,0 +1,235 @@
+.product {
+    .section__title {
+        margin-bottom: 0;
+
+        @media (max-width: 767px) {
+            span {
+                font-size: 1em;
+            }
+        }
+    }
+
+    &.sale {
+        .product__price {
+            ins {
+                color: $color_danger;
+            }
+        }
+    }
+
+    @media (max-width: 767px) {
+        padding-top: 0;
+    }
+
+    &__top {
+        @media (min-width: 768px) {
+            margin-top: 4em;
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    &__left {
+        position: relative;
+        @media (min-width: 768px) {
+            width: 56.25em;
+        }
+
+        .swiper__arrows {
+            @media (min-width: 768px) {
+                width: 52.5em;
+                z-index: 1;
+            }
+        }
+
+    }
+
+    &__img {
+        width: 100%;
+        overflow: hidden;
+        height: 16.875em;
+        border-radius: 1em;
+        @media (min-width: 768px) {
+            height: 35em;
+            border-radius: 2.25em;
+
+        }
+    }
+
+    &__right {
+        margin-top: 1.25em;
+        @media (min-width: 768px) {
+            margin-top: 0;
+            width: 29.375em;
+        }
+    }
+
+    &__boolean {
+        letter-spacing: 0.02em;
+        color: $color_success;
+        font-size: 0.625em;
+        margin-top: 2em;
+        @media (min-width: 768px) {
+            font-size: 1em;
+            margin-top: 0;
+        }
+
+        &:before {
+            content: '\e90a';
+            font-family: $icon_font_family;
+            font-size: 0.5em;
+            display: inline-block;
+            transform: translateY(-0.125em);
+            margin-right: 0.5em;
+        }
+
+        &.false {
+            color: $color_danger;
+
+            &:before {
+                content: none;
+            }
+        }
+    }
+
+    &__price {
+        margin-top: 0.125em;
+        @media (min-width: 768px) {
+            margin-top: 1.125em;
+
+        }
+
+        ins {
+            font-family: $second_font_family;
+            color: $main_color;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.25em;
+            letter-spacing: 0.05em;
+            line-height: 1.5;
+
+            @media (min-width: 768px) {
+                font-weight: 500;
+                font-size: 3em;
+            }
+
+            .woocommerce-Price-currencySymbol {
+                font-size: 0.67em;
+            }
+
+        }
+
+        del {
+            color: #ADCACB;
+            font-size: 1em;
+            margin-left: 0.375em;
+            @media (min-width: 768px) {
+                font-size: 2em;
+
+            }
+
+            .woocommerce-Price-currencySymbol {
+                font-size: 0.875em;
+            }
+        }
+    }
+
+    &__btn,
+    &__click {
+        @media (min-width: 768px) {
+            width: 21.25em;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 1.401em 0.5em;
+
+            @media (min-width: 768px) {
+                font-size: 1.125em;
+                padding: 1.484em 0.5em;
+            }
+        }
+    }
+
+    &__btn {
+        margin-top: 1em;
+        @media (min-width: 768px) {
+            margin-top: 2em;
+
+        }
+    }
+
+    &__click {
+        margin-top: 0.5em;
+        @media (min-width: 768px) {
+            margin-top: 1em;
+
+        }
+    }
+
+    &__bottom {
+        margin-top: 2.5em;
+        @media (min-width: 768px) {
+            margin-top: 4em;
+            width: 56.25em;
+
+            // .tabs {
+            //     justify-content: space-between;
+            //
+            //     .tab {
+            //         margin-right: 0;
+            //     }
+            // }
+        }
+
+    }
+
+    &__advantage {
+        margin: 1.25em 0 0;
+        padding: 0;
+        list-style: none;
+        @media (min-width: 768px) {
+            margin: 2em 0 0;
+
+        }
+
+        &_item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.875em;
+            @media (min-width: 768px) {
+                margin-bottom: 1.25em;
+
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            span {
+                letter-spacing: 0.02em;
+                font-family: $second_font_family;
+                font-size: 0.75em;
+                font-weight: 500;
+                line-height: 1.5;
+                @media (min-width: 768px) {
+                    font-size: 0.875em;
+
+                }
+            }
+        }
+
+        &_img {
+            width: 1.5em;
+            height: 1.5em;
+            margin-right: 0.5em;
+            @media (min-width: 768px) {
+                width: 2.5em;
+                height: 2.5em;
+                margin-right: 0.875em;
+
+            }
+        }
+    }
+
+}
