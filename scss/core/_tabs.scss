@@ -4,8 +4,29 @@
     margin-top: 1.25em;
     @media (min-width: 768px) {
         margin-top: 2.5em;
-
     }
+
+}
+
+.tabs__btn {
+    margin-top: 1.25em;
+    @media (min-width: 768px) {
+        margin-top: 2.5em;
+    }
+
+    .btn {
+
+        padding-top: 1.484em;
+        padding-bottom: 1.484em;
+
+        @media (min-width: 768px) {
+            font-size: 1.125em;
+
+            padding-top: 1.484em;
+            padding-bottom: 1.484em;
+        }
+    }
+
 }
 
 .tabs {

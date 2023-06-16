@@ -63,6 +63,26 @@
             }
         }
 
+        &.youtube {
+            color: $color_white;
+            background-color: #FF2600;
+        }
+
+        &.instagram {
+            color: $color_white;
+            background: linear-gradient(49.12deg, #FFDD55 7.02%, #FF543E 50.45%, #C837AB 93.88%);
+        }
+
+        &.facebook {
+            color: $color_white;
+            background-color: #3b5998;
+        }
+
+        &.vk {
+            color: $color_white;
+            background-color: #597da3;
+        }
+
     }
 
 }

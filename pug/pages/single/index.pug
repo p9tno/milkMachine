@@ -1,0 +1,157 @@
+extends ../../layout/layout.pug
+
+block variable
+    -var path = '../../';
+
+block content
+
+    // begin breadcrumb
+    .breadcrumb.desktop 
+        .container_center
+            naw.woocommerce-breadcrumb
+                a(href="#") Главная
+                a(href="#") Блог
+                | Лучшая сельхозтехника для увеличения урожайности
+
+    // end breadcrumb
+
+    // begin
+    section.section
+        .container_center
+            h1.section__title.section__title_lg
+                span Лучшая сельхозтехника для увеличения урожайности
+            .section__wrap
+                .section__date 24 марта 2023
+
+                .section__content
+                    // begin row
+                    .section__row
+                        .section__img.img
+                            img(src="../../img/img_1.jpg" loading="lazy")
+                    // end row
+
+                    // begin row
+                    .section__row
+                        .section__text
+                            h2 Подзаголовок
+                            p Для увеличения урожайности сельскохозяйственных культур необходимо использовать не только современную технику, но и правильно организовать процессы выращивания. Одним из ключевых аспектов является выбор сортов растений, подходящих для конкретных условий региона. Также необходимо уделять внимание агротехнике, включая полив, подкормку и защиту растений от вредителей и болезней.
+                            p Современные технологии позволяют автоматизировать многие процессы в сельском хозяйстве, что упрощает работу фермеров и повышает качество продукции. Например, использование точных систем опрыскивания позволяет минимизировать расходы на химические средства защиты растений и уменьшить негативное воздействие на окружающую среду. Также существуют системы мониторинга состояния почвы и растений, которые позволяют оперативно реагировать на возникающие проблемы и принимать эффективные меры по увеличению урожайности.
+                    // end row
+
+                    // begin row
+                    .section__row.section__row_flex
+                        .section__text
+                            h2 Подзаголовок
+                            p Для увеличения урожайности сельскохозяйственных культур необходимо использовать не только современную технику, но и правильно организовать процессы выращивания. Одним из ключевых аспектов является выбор сортов растений, подходящих для конкретных условий региона. Также необходимо уделять внимание агротехнике, включая полив, подкормку и защиту растений от вредителей и болезней.
+                        .section__img.img
+                            img(src="../../img/img_2.jpg" loading="lazy")
+                    // end row
+
+                    // begin row
+                    .section__row.section__row_flex.reverse
+                        .section__text
+                            h2 Подзаголовок
+                            p Для увеличения урожайности сельскохозяйственных культур необходимо использовать не только современную технику, но и правильно организовать процессы выращивания. Одним из ключевых аспектов является выбор сортов растений, подходящих для конкретных условий региона. Также необходимо уделять внимание агротехнике, включая полив, подкормку и защиту растений от вредителей и болезней.
+                        .section__img.img
+                            img(src="../../img/img_3.jpg" loading="lazy")
+                    // end row
+
+                    // begin row
+                    .section__row
+                        .section__quote
+                            span Место для цитаты из статьи, если нужно в 2-3 строки
+                    // end row
+
+                // begin sidebar
+                .section__sidebar
+                    .sidebar
+                        // begin sidebar__item
+                        .sidebar__item.sidebar__item_download.bg
+                            .sidebar__title Скачайте полный каталог товаров от производителя с фотографиями, описанием и ценами
+                            .sidebar__form
+                                form.form(action="send.php")
+                                    input(type="hidden" name="subject" value="форма в футоре")
+                                    input(type="hidden" name="notspam" value="")
+
+                                    .form__row
+                                        <div class="form__label"><span>Куда прислать?</span></div>
+                                            <select class="select" name="messenger" data-placeholder="Whatsapp">
+                                                <option value=""></option>
+                                                <option value="whatsapp" selected="selected">Whatsapp</option>
+                                                <option value="Viber">Viber</option>
+                                                <option value="Telegram">Telegram</option>
+                                            </select>
+
+
+                                    .form__row
+                                        .form__label Ваш номер телефона
+                                        input.tel(type="text" name="phone" required placeholder="+375(___) ___ - __ - __")
+
+                                    .form__row
+                                        button.btn.btn_disabled_js(type="submit") Cкачать каталог
+
+                                    .form__row.form__row_full.mb_0
+                                        .form__privacy
+                                            label.form__check
+                                                input.check_checked_js(type="checkbox" checked="checked")
+                                                span Даю согласие на обработку моих <a href="#" target="_blank">персональных данных</a>
+                        // end sidebar__item
+
+                        // begin sidebar__item
+                        .sidebar__item.sidebar__item_messenger
+                            .sidebar__title Подписывайтесь
+                            .messenger
+                                .messenger__list
+                                    .messenger__item
+                                        a.messenger__link.youtube(href="#" target="_blank")
+                                            i.icon_youtube
+                                    .messenger__item
+                                        a.messenger__link.instagram(href="#" target="_blank")
+                                            i.icon_instagram
+                                    .messenger__item
+                                        a.messenger__link.facebook(href="#" target="_blank")
+                                            i.icon_facebook
+                                    .messenger__item
+                                        a.messenger__link.vk(href="#" target="_blank")
+                                            i.icon_vk
+                        // end sidebar__item
+
+                // end sidebar
+
+
+    // end
+
+    // begin blog
+    section#blog.blog.section.pb_90
+        .container_center
+            .blog__caption
+                h2.section__title
+                    span Также вам может быть интересно
+
+                .blog__more.desktop.snakeline
+                    a(href="#") Cмотреть все статьи
+
+
+            .blog__slider
+                .swiper.swiper_blog_js
+                    .swiper-wrapper
+
+                        each item in [ {img: '1', title: 'Лучшая сельхозтехника для увеличения урожайности'}, {img: '2', title: 'Как современные технологии помогают сельскому хозяйству'}, {img: '3', title: 'Новейшие разработки в области сельхозтехники'}, {img: '1', title: 'Лучшая сельхозтехника для увеличения урожайности'}, ]
+                            .swiper-slide
+                                .blog__item
+
+                                    a(href="#").blog__img.img
+                                        img(src="../../img/blog_"+item.img+".jpg", alt="alt")
+                                    a(href="#").blog__title=item.title
+                                    .blog__date 24 марта 2023
+
+
+                .swiper__arrows
+                    i.icon_arrow_left
+                    i.icon_arrow_right
+
+
+            .blog__more.mobile
+                a(href="#") Cмотреть все статьи
+
+    // end blog

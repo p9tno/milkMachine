@@ -1,0 +1,22 @@
+extends ../../layout/layout.pug
+
+block variable
+    -var path = '../../';
+
+block content
+    // begin notfound
+    section#notfound.notfound.section
+        .container_center
+            .notfound__content.bg
+
+                .notfound__img.img
+                    img(src="../../img/404.svg", alt="alt")
+
+                .notfound__wrap
+                    h1.section__title.section__title_lg
+                        span К сожалению такой страницы не существует(
+                    .notfound__info Ошибка 404
+                    .notfound__btn
+                        a.btn.btn_lg(href="/") Вернуться на главную
+
+    // end notfound

@@ -116,5 +116,31 @@ $(document).ready(function() {
 
     });
 
+    const team = new Swiper('.swiper_team_js', {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        speed: 500,
+        loop: true,
+        autoHeight: true,
+
+        autoplay: {
+          delay: 5000,
+        },
+
+
+        navigation: {
+            nextEl: '.arrows_team_js .icon_arrow_right',
+            prevEl: '.arrows_team_js .icon_arrow_left',
+        },
+
+        breakpoints: {
+            768: {
+                spaceBetween: 33,
+                slidesPerView: 4,
+            },
+        },
+
+    });
+
 
 });

@@ -1,0 +1,79 @@
+extends ../../layout/layout.pug
+
+block variable
+    -var path = '../../';
+    //- -var page = 'bg';
+
+block content
+    // begin breadcrumb
+    .breadcrumb.desktop 
+        .container_center
+            naw.woocommerce-breadcrumb
+                a(href="#") Главная
+                | О компании
+
+    // end breadcrumb
+
+    // begin haed
+    section#haed.haed.section
+        .container_center
+            .haed__wrap
+                .haed__img.img
+                    img(src="../../img/head.webp", alt="alt")
+                .haed__content
+                    h1.section__title.section__title_lg
+                        span О компании
+                    .haed__desc Овёска - ваш надёжный интернет-магазин для приобретения оборудования для животноводства и фермерства
+    // end haed
+
+    // begin ourmission
+    section#ourmission.ourmission.section
+        .container_center
+            .ourmission__wrap
+                .ourmission__content
+                    h2.section__title
+                        span Наша миссия и видение
+                    p Наша компания занимается продажей и установкой оборудования для животноводства и фермерства с одной целью - помочь нашим клиентам повысить эффективность своего бизнеса.
+                    p Мы верим, что оптимизация затрат и увеличение производительности должны идти рука об руку с уважением к животным и сохранением окружающей среды.
+
+                .ourmission__img.img
+                    img(src="../../img/ourmission.webp", alt="alt")
+
+                    .ourmission__worker
+                        .worker
+                            .worker__name Бурдо Александр Евгеньевич
+                            .worker__info Учредитель компании “Белэксальто”
+
+
+    // end ourmission
+
+    include ../../includes/advantage.pug
+
+    // begin team
+    section#team.team.section
+        .container_center
+            h2.section__title
+                span Коллектив специалистов
+            .team__slider
+                .swiper.swiper_team_js
+                    .swiper-wrapper
+                        each item in [ {img: '1', name: 'Бурдо Александр Евгеньевич', info: 'Учредитель компании “Белэксальто”'}, {img: '2', name: 'Рябцев Сергей Анатольевич', info: 'Управляющий'}, {img: '3', name: 'Бурдо Елена<br> Анатольевна', info: 'Заместитель управляющего по коммерческим вопросам'}, {img: '4', name: 'Рафеева Екатерина Валерьевна', info: 'Специалист по продаже'}, ]
+                            .swiper-slide
+                                .team__item
+                                    .team__img.img
+                                        img(src="../../img/team_"+item.img+".webp", alt="alt")
+                                    .team__name!=item.name
+                                    .team__info=item.info
+
+
+
+                .swiper__arrows.arrows_team_js
+                    i.icon_arrow_left
+                    i.icon_arrow_right
+
+
+    // end team
+
+    include ../../includes/information.pug
+
+    include ../../includes/content.pug

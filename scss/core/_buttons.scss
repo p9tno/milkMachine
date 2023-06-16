@@ -51,6 +51,13 @@
 		}
 	}
 
+	&_lg {
+		padding: 1.1em 0.5em;
+		@media (min-width: 768px) {
+			padding: 1.4em 3.5em;
+		}
+	}
+
 	&:disabled {
 		// color: red;
 		background-color: lighten($color_success, 10%);

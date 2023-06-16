@@ -1,0 +1,66 @@
+.notfound {
+    .section__title {
+        margin-bottom: 0;
+    }
+    @media (min-width: 768px) {
+        padding-bottom: 5.625em;
+    }
+
+    &__content {
+        position: relative;
+
+        background-image: url("../../img/section_bg.webp");
+        padding: 2.25em 1.25em 8em;
+        border-radius: 1.25em;
+        overflow: hidden;
+
+        @media (max-width: 767px) {
+            background-position: 41%;
+        }
+
+        @media (min-width: 768px) {
+            padding: 5.875em 6.25em;
+            border-radius: 2.25em;
+        }
+    }
+
+    &__wrap {
+        position: relative;
+        @media (min-width: 768px) {
+            width: 52.5em;
+        }
+    }
+
+    &__img {
+        position: absolute;
+        bottom: -0.75em;
+        right: -8.375em;
+        width: 73.875em;
+        height: 24.6875em;
+        font-size: 0.25em;
+        @media (min-width: 768px) {
+            font-size: 1em;
+        }
+    }
+
+    &__info {
+        letter-spacing: 0.05em;
+        color: $color_primary;
+        line-height: 1.17;
+        margin-top: 0.833334em;
+        font-size: 0.875em;
+        @media (min-width: 768px) {
+            font-size: 1.5em;
+
+        }
+    }
+
+    &__btn {
+        margin-top: 1.25em;
+        @media (min-width: 768px) {
+            margin-top: 2.5em;
+
+        }
+    }
+
+}

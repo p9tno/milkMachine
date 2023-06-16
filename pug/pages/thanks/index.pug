@@ -1,0 +1,25 @@
+extends ../../layout/layout.pug
+
+block variable
+    -var path = '../../';
+
+block content
+    // begin thanks
+    section#thanks.thanks.section
+        .container_center
+            .thanks__content.bg
+                h1.section__title.section__title_lg
+                    span Спасибо! Мы получили ваши данные и совсем скоро с вами свяжемся
+                .thanks__btn
+                    a.btn.btn_lg(href="/") Вернуться на главную
+
+                .thanks__img.img
+                    img(src="../../img/thanks.webp", alt="alt")
+
+                .thanks__worker
+                    .worker
+                        .worker__name Елена Бурдо
+                        .worker__info Менеджер по работе с клиентами
+
+
+    // end thanks

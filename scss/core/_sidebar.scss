@@ -1,0 +1,79 @@
+.sidebar {
+    margin-top: 1.25em;
+    @media (min-width: 768px) {
+        margin-top: 0;
+    }
+
+    &__item {
+        background-color: #F5F9F9;
+        padding: 1.25em;
+        border-radius: 1em;
+        margin-bottom: 1em;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        @media (min-width: 768px) {
+            padding: 2.5em;
+            margin-bottom: 1.25em;
+            border-radius: 1.25em;
+        }
+    }
+
+    &__item_download {
+        background-image: url("../../img/aside.webp");
+    }
+
+    &__item_messenger {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .sidebar__title {
+            @media (max-width: 767px) {
+                font-size: 0.5em;
+            }
+        }
+
+        .messenger__list {
+            @media (max-width: 767px) {
+                margin-top: 0;
+            }
+        }
+
+        .messenger__link {
+            @media (min-width: 768px) {
+                font-size: 1.43em;
+            }
+        }
+    }
+
+    &__title {
+        font-family: $second_font_family;
+        font-weight: 500;
+        line-height: 1.5;
+
+        font-size: 0.75em;
+        @media (min-width: 768px) {
+            font-size: 1.125em;
+
+        }
+    }
+
+    &__form {
+        margin-top: 2.58em;
+        @media (min-width: 768px) {
+            margin-top: 9.653em;
+        }
+
+        .form__check span a {
+            color: $color_success;
+        }
+
+        .form input[type=checkbox] {
+            margin-left: 0;
+        }
+    }
+
+}
