@@ -28,7 +28,7 @@
     height: 10em;
     border-radius: 50%;
     border: 0.188em solid transparent;
-    border-top-color: rgba($main_color, 0.75);
+    border-top-color: rgba($color_success, 0.75);
     animation: preloader-5-spin 2s linear infinite;
 
     &:before {
@@ -40,7 +40,7 @@
         bottom: 0.375em;
         border-radius: 50%;
         border: 0.188em solid transparent;
-        border-top-color: rgba($main_color, 0.5);
+        border-top-color: rgba($color_success, 0.5);
         animation: preloader-5-spin 3s linear infinite;
     }
 
@@ -53,7 +53,7 @@
         bottom: 1em;
         border-radius: 50%;
         border: 0.188em solid transparent;
-        border-top-color: rgba($main_color, 1);
+        border-top-color: rgba($color_success, 1);
         animation: preloader-5-spin 1.5s linear infinite;
     }
 

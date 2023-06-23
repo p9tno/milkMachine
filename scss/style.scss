@@ -12,8 +12,7 @@
 @import 'core/catalogue';
 @import 'core/logo';
 
-// @import 'core/preloader';
-// @import 'core/toTop';
+@import 'core/preloader';
 
 @import 'core/header';
 @import 'core/footer';
@@ -22,10 +21,7 @@
 @import 'core/breadcrumb';
 @import 'core/pagination';
 @import 'core/sidebar';
-
-// @import 'core/video';
 @import 'core/tabs';
-// @import 'core/drop';
 
 @import 'section/preview';
 @import 'section/advantage';
@@ -44,9 +40,14 @@
 @import 'section/haed';
 @import 'section/ourmission';
 @import 'section/team';
+@import 'section/basket';
+@import 'section/cartempty';
+@import 'section/checkout';
 
 @import 'vendor/modal';
 @import 'vendor/swiper';
 
 @import 'core/form';
 @import 'core/collapse';
+@import 'core/quantity';
+@import 'core/collaterals';

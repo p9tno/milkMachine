@@ -1,0 +1,32 @@
+extends ../../layout/layout.pug
+
+block variable
+    -var path = '../../';
+    //- -var page = 'bg';
+
+block content
+    // begin breadcrumb
+    .breadcrumb.desktop 
+        .container_center
+            naw.woocommerce-breadcrumb
+                a(href="#") Главная
+                | Корзина
+
+    // end breadcrumb
+
+    // begin cartempty
+    section#cartempty.cartempty.section.pb_90
+        .container_center
+            .cartempty__content.bg
+
+                .cartempty__img.img
+                    img(src="../../img/cartempty.webp", alt="alt")
+
+                .cartempty__wrap
+                    h1.section__title.section__title_lg
+                        span Корзина
+                    .cartempty__info У вас нет пока ни одного товара в корзине, можете перейти к выбору товара
+                    .cartempty__btn
+                        a.btn(href="/") Выбрать товар
+
+    // end cartempty

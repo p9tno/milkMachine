@@ -1,0 +1,91 @@
+.quantity {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0.875em 1.375em;
+
+    background-color: #F5F9F9;
+    border-radius: 2.5em;
+
+    font-size: 0.5em;
+    @media (min-width: 768px) {
+        font-size: 1em;
+    }
+
+    &__btn {
+        display: inline-block;
+        border: 0;
+        border-radius: 0;
+        background-color: transparent;
+        cursor: pointer;
+
+        color: $color_green;
+        padding: 0;
+        line-height: 1;
+        transition: 0.3s;
+        font-size: 1em;
+
+        &:disabled {
+            color: #ADCACB;
+            cursor: not-allowed;
+        }
+
+        &:before {
+            display: inline-block;
+            font-family: $icon_font_family;
+            padding: 0.3125em 0.25em;
+            font-size: 0.875em;
+            // border: 1px solid #000;
+
+        }
+
+        &.quantity_minus {
+            &:before {
+                content: '\e91b';
+
+            }
+
+        }
+
+        &.quantity_plus {
+            &:before {
+                content: '\e91c';
+
+            }
+
+        }
+
+    }
+
+    &__input {
+        text-align: center;
+
+        background-color: transparent;
+        border: 0;
+        border-radius: 0;
+        font-family: $main_font_family;
+        color: $main_color;
+        font-weight: 400;
+        letter-spacing: 0.02em;
+        outline: none;
+        transition: 0.3s;
+
+        font-size: 1.25em;
+        padding: 0;
+
+        width: 100%;
+
+    }
+    /* Для Chrome */
+    input[type=number]::-webkit-inner-spin-button,
+    input[type=number]::-webkit-outer-spin-button {
+        height: auto;
+        appearance: none;
+        margin: 0;
+    }
+    /* Для Firefox */
+    input[type=number] {
+        appearance: textfield;
+    }
+}

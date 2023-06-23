@@ -1,0 +1,80 @@
+extends ../../layout/layout.pug
+
+block variable
+    -var path = '../../';
+    //- -var page = 'bg';
+
+block content
+    // begin breadcrumb
+    .breadcrumb.desktop 
+        .container_center
+            naw.woocommerce-breadcrumb
+                a(href="#") Главная
+                | Корзина
+
+    // end breadcrumb
+
+    // begin basket
+    section#basket.basket.section.pb_90 
+        .container_center
+            h1.section__title.section__title_lg
+                span Корзина
+            .basket__content
+                .basket__table
+                    .table
+                        .table__body
+                            each item in ['', '', ]
+
+                                .table__row
+                                    .table__col
+                                        .basket__img.img
+                                            img(src="../../img/basket.jpg", alt="alt")
+                                    .table__col
+                                        .basket__title Доильный аппарат ТК 2-РК для коров
+                                        .basket__boolean В наличии
+
+                                    .table__col
+                                        .basket__price
+                                            bdi 1726  
+                                                span.woocommerce-Price-currencySymbol руб
+
+                                    .table__col
+                                        .basket__quantity
+                                            .quantity
+                                                button(disabled).quantity__btn.quantity_minus
+                                                input.quantity__input(type="number" value="1")
+                                                button.quantity__btn.quantity_plus
+                                    .table__col
+                                        .basket__remove
+                                            a(href="#")
+
+
+
+                .basket__collaterals
+                    .collaterals
+                        .collaterals__list
+                            .collaterals__item
+                                .collaterals__label Ваш заказ
+                                .collaterals__choice 1 товар
+                            .collaterals__item 
+                                .collaterals__label Товары на сумму
+                                .collaterals__choice 2000 руб
+                            .collaterals__item
+                                .collaterals__label Скидка
+                                .collaterals__choice.sell - 274 руб
+
+                        .collaterals__total
+
+                            span Итого
+
+                            bdi 1726  
+                                span.woocommerce-Price-currencySymbol руб
+
+                        .collaterals__btn
+                            a.btn.btn_lg(href="#") Перейти к оформлению
+
+                        .collaterals__info *Способ доставки можно будет выбрать при оформлении заказа
+
+
+
+    // end basket

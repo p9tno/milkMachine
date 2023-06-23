@@ -1,0 +1,68 @@
+.cartempty {
+    .section__title {
+        margin-bottom: 0;
+    }
+    padding-top: 0;
+    @media (min-width: 768px) {
+        padding-top: 1em;
+
+    }
+
+    &__content {
+        position: relative;
+
+        background-image: url("../../img/section_bg.webp");
+        overflow: hidden;
+
+        padding: 2.25em 1.25em 8.5em;
+        border-radius: 1.25em;
+
+        @media (max-width: 767px) {
+            background-position: 41%;
+        }
+
+        @media (min-width: 768px) {
+            padding: 6em 6.25em 8.75em;
+            border-radius: 2.25em;
+
+        }
+    }
+
+    &__img {
+        position: absolute;
+        bottom: -5em;
+        right: -2em;
+
+        width: 37.0625em;
+        height: 37.6875em;
+        font-size: 0.4em;
+        @media (min-width: 768px) {
+            font-size: 1em;
+            bottom: -5em;
+            right: -1em;
+
+        }
+    }
+
+    &__wrap {
+        position: relative;
+        @media (min-width: 768px) {
+            width: 29.375em;
+        }
+    }
+
+    &__info {
+        color: $color_primary;
+        line-height: 1.4;
+        margin-top: 1.6em;
+        font-size: 0.875em;
+        @media (min-width: 768px) {
+            font-size: 1.25em;
+        }
+    }
+
+    &__btn {
+        margin-top: 2em;
+    }
+
+}

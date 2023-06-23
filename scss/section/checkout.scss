@@ -1,0 +1,406 @@
+.checkout {
+    .pickup_js {
+        display: none;
+    }
+
+    &__wrap {
+        margin-top: 2.5em;
+    }
+
+    &__form {
+        @media (min-width: 768px) {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    &__content {
+        background-color: $color_white;
+        border: 0.0625em solid rgba(173, 202, 203, 0.3);
+        border-radius: 1.25em;
+        padding: 0.9375em;
+        @media (min-width: 768px) {
+            padding: 2.5em;
+            border-radius: 2.25em;
+            width: 62.5em;
+        }
+    }
+
+    &__collaterals {
+        margin-top: 1.25em;
+        @media (min-width: 768px) {
+            margin-top: 0;
+
+            width: 31.25em;
+            flex: none;
+            position: sticky;
+            top: 3.75em;
+            height: 100%;
+        }
+    }
+
+    &__item {
+        margin-bottom: 1.25em;
+        @media (min-width: 768px) {
+            margin-bottom: 4em;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__title {
+        letter-spacing: 0.02em;
+        font-family: $second_font_family;
+        font-weight: 500;
+        margin-bottom: 0.75em;
+        font-size: 1em;
+        @media (min-width: 768px) {
+            line-height: 0.8;
+            font-size: 1.75em;
+            margin-bottom: 1.4285em;
+
+        }
+    }
+
+    &__row {
+        margin-bottom: 0.5em;
+        @media (min-width: 768px) {
+            margin-bottom: 1.25em;
+
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        .btn,
+        input:not([type]),
+        input[type=date],
+        input[type=email],
+        input[type=number],
+        input[type=password],
+        input[type=search],
+        input[type=tel],
+        input[type=text],
+        input[type=url],
+        textarea {
+
+            width: 100%;
+
+            @media (min-width: 768px) {
+                width: 33.125em;
+            }
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 7.5em;
+        }
+
+        &_full {
+            .btn,
+            input:not([type]),
+            input[type=date],
+            input[type=email],
+            input[type=number],
+            input[type=password],
+            input[type=search],
+            input[type=tel],
+            input[type=text],
+            input[type=url],
+            textarea {
+                width: 100%;
+            }
+        }
+    }
+
+    &__label {
+        margin-bottom: 0.25em;
+        @media (min-width: 768px) {
+            margin-bottom: 0.5em;
+
+        }
+
+        span {
+            letter-spacing: 0.02em;
+            font-size: 0.75em;
+
+            &:nth-child(2) {
+                color: $color_danger;
+            }
+
+            @media (min-width: 768px) {
+                font-size: 1em;
+
+            }
+        }
+    }
+
+    &__text {
+        font-size: 0.75em;
+        line-height: 1.8;
+        @media (min-width: 768px) {
+            line-height: 1.78;
+            font-size: 1.25em;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+
+        .checkout__radio {
+
+            margin-bottom: 0.75em;
+            @media (min-width: 768px) {
+                margin-bottom: 1.875em;
+
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__grid {
+        @media (min-width: 768px) {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 1.875em;
+        }
+
+        .checkout__radio {
+            position: relative;
+            width: auto;
+            padding: 1.125em;
+            margin-bottom: 0.5em;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+            @media (min-width: 768px) {
+                padding: 2em;
+                margin-bottom: 0;
+            }
+
+            input[type=radio] {
+                &:after {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    // border: 1px solid #000;
+                    border: 0.0625em solid;
+                    border-color: rgba(173, 202, 203, 0.3);
+                    transition: 0.3s;
+                    border-radius: 0.875em;
+                    @media (min-width: 768px) {
+                        border-radius: 1.25em;
+
+                    }
+                }
+            }
+        }
+    }
+
+    &__radio {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        width: fit-content;
+
+        &:hover {
+            input[type=radio] {
+                border-color: $color_success;
+
+                &:after {
+                    border-color: $color_success;
+
+                }
+            }
+
+        }
+
+        span {
+            letter-spacing: 0.01em;
+            font-size: 0.75em;
+            line-height: 1.6;
+            @media (min-width: 768px) {
+                font-size: 1.25em;
+
+            }
+        }
+    }
+
+    // Input text and textarea ================================================
+    input:not([type]),
+    input[type=date],
+    input[type=email],
+    input[type=number],
+    input[type=password],
+    input[type=search],
+    input[type=tel],
+    input[type=text],
+    input[type=url],
+    textarea {
+        background-color: $color_white;
+        border: 0.0625em solid;
+        border-color: rgba(173, 202, 203, 0.3);
+
+        font-family: $main_font_family;
+        color: $main_color;
+        font-weight: 400;
+
+        letter-spacing: 0.02em;
+        outline: none;
+        transition: 0.3s;
+
+        border-radius: 1.25em;
+
+        font-size: 0.75em;
+        padding: 1.292em 1.333334em;
+        @media (min-width: 768px) {
+            font-size: 1em;
+            padding: 1.219em 2em;
+
+        }
+
+        &:hover {
+            border-color: $color_success;
+        }
+
+        &:focus {
+            border-color: $color_success;
+        }
+
+        &.invalid {
+            border-color: $color_danger;
+        }
+        // Placeholder for input +++++++++++++++
+        @include placeholder {
+            color: rgba(115, 149, 150, 0.4);
+        }
+    }
+
+    // Input radio ===============================================
+    input[type=radio] {
+        padding: 0;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        flex: none;
+
+        height: 1.75em;
+        width: 1.75em;
+        border-radius: 100%;
+
+        // color: $color_success;
+        background: 0 0;
+        background-color: transparent;
+        border: 0.0625em solid;
+        border-color: rgba(173, 202, 203, 0.3);
+
+        overflow: hidden;
+        vertical-align: middle;
+        appearance: none;
+        outline: 0;
+        text-align: center;
+        // position: relative;
+
+        transition: 0.3s;
+
+        font-size: 0.7143em;
+        margin-right: 1em;
+        @media (min-width: 768px) {
+            font-size: 1em;
+            margin-right: 1.25em;
+        }
+
+        &:not(:disabled),
+        &:not(:disabled) {
+            cursor: pointer;
+        }
+
+        &:before {
+            display: block;
+            transition: 0.3s;
+        }
+
+        &:disabled,
+        &:disabled {
+            color: #ddd;
+        }
+    }
+
+    input[type=radio] {
+        border-radius: 50%;
+
+        &:checked {
+            background-color: $color_success;
+            border-color: $color_success;
+
+        }
+
+        &:checked:before {
+            content: '';
+            width: 0.75em;
+            height: 0.75em;
+            display: block;
+            border-radius: 50%;
+            background: $color_white;
+        }
+
+        &:checked:after {
+            border-color: $color_success;
+        }
+
+        &:disabled:checked:before {
+            background-color: #aaa;
+        }
+    }
+
+}
+
+.section {
+    &__title {}
+
+    &__title_lg {}
+
+}
+
+.container_center {}
+
+.tel {}
+
+.collaterals {
+    &__title {}
+
+    &__list {}
+
+    &__item {}
+
+    &__label {}
+
+    &__choice {}
+
+    &__total {}
+
+    &__btn {}
+
+    &__info {}
+
+}
+
+.sell {}
+
+.woocommerce-Price-currencySymbol {}
+
+.btn {}
+
+.btn_lg {}

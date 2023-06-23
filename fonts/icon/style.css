@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icon';
-  src:  url('fonts/icon.eot?ykqdr2');
-  src:  url('fonts/icon.eot?ykqdr2#iefix') format('embedded-opentype'),
-    url('fonts/icon.ttf?ykqdr2') format('truetype'),
-    url('fonts/icon.woff?ykqdr2') format('woff'),
-    url('fonts/icon.svg?ykqdr2#icon') format('svg');
+  src:  url('fonts/icon.eot?do45nu');
+  src:  url('fonts/icon.eot?do45nu#iefix') format('embedded-opentype'),
+    url('fonts/icon.ttf?do45nu') format('truetype'),
+    url('fonts/icon.woff?do45nu') format('woff'),
+    url('fonts/icon.svg?do45nu#icon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,6 +25,12 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon_minus:before {
+  content: "\e91b";
+}
+.icon_plus:before {
+  content: "\e91c";
+}
 .icon_quote:before {
   content: "\e91a";
 }
@@ -57,6 +63,9 @@
 }
 .icon_location:before {
   content: "\e907";
+}
+.icon_delete2:before {
+  content: "\e91d";
 }
 .icon_delete:before {
   content: "\e908";

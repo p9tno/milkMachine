@@ -1,0 +1,158 @@
+extends ../../layout/layout.pug
+
+block variable
+    -var path = '../../';
+    //- -var page = 'bg';
+
+block content
+    // begin breadcrumb
+    .breadcrumb.desktop 
+        .container_center
+            naw.woocommerce-breadcrumb
+                a(href="#") Главная
+                | Оформление заказа
+
+    // end breadcrumb
+
+    // begin checkout
+    section#checkout.checkout.section
+        .container_center
+            h1.section__title.section__title_lg
+                span Оформление заказа
+
+            .checkout__wrap
+                form.checkout__form(action="send.php")
+                    .checkout__content
+
+                        //- begin item
+                        .checkout__item
+                            .checkout__title Способ доставки
+
+                            .checkout__grid
+                                label.checkout__radio
+                                    input.delivery_method_js(type="radio" name="test" checked="checked" value="delivery")
+                                    span Транспортная компания
+                                label.checkout__radio
+                                    input.delivery_method_js(type="radio" name="test" value="pickup")
+                                    span Самовывоз
+
+                        //- end item
+
+                        //- begin item
+                        .checkout__item.delivery_js
+                            .checkout__title Адрес доставки
+
+                            .checkout__row.checkout__row_full
+                                .checkout__label
+                                    span Область
+                                    span *
+                                input(type="text" required placeholder="Область, район")
+
+                            .checkout__row.checkout__row_full
+                                .checkout__label
+                                    span Адрес
+                                    span *
+                                textarea(type="text" required placeholder="Населённый пункт, улица, дом")
+
+                        //- end item
+
+                        //- begin item
+                        .checkout__item.pickup_js
+                            .checkout__title Адрес
+                            .checkout__text 213828 Республика Беларусь, Могилёвская область, г. Бобруйск, ул. Октябрьская 149а
+                        //- end item
+
+                        //- begin item
+                        .checkout__item
+                            .checkout__title Способ оплаты
+
+                            .checkout__list
+                                label.checkout__radio
+                                    input(type="radio" name="test2" checked="checked" value="test_6")
+                                    span Наложенный платеж
+
+                                label.checkout__radio
+                                    input(type="radio" name="test2" value="test_3")
+                                    span Банковской картой (онлайн)
+
+                                label.checkout__radio
+                                    input(type="radio" name="test2" value="test_4")
+                                    span Банковской картой (онлайн через систему АИС “Расчёт” ЕРИП)
+
+                                label.checkout__radio
+                                    input(type="radio" name="test2" value="test_5")
+                                    span Рассрочка 2 месяца МТБанк халва
+
+                        //- end item
+
+                        //- begin item
+                        .checkout__item
+                            .checkout__title Информация о покупателе
+
+                            .checkout__row
+                                .checkout__label
+                                    span Имя
+                                    span *
+                                input(type="text" required placeholder="Введите имя")
+
+                            .checkout__row
+                                .checkout__label
+                                    span Отчество
+                                    span *
+                                input(type="text" required placeholder="Введите отчество")
+
+                            .checkout__row
+                                .checkout__label
+                                    span Фамилия
+                                    span *
+                                input(type="text" required placeholder="Введите фамилию")
+
+                            .checkout__row
+                                .checkout__label
+                                    span Телефон
+                                    span *
+                                input.tel(type="text" required placeholder="+375(___) ___ - __ - __")
+
+                            .checkout__row
+                                .checkout__label
+                                    span E-mail
+                                input(type="email" placeholder="Введите e-mail")
+
+                            .checkout__row
+                                .checkout__label
+                                    span Комментарий к заказу
+                                textarea(type="text" placeholder="Уточнения к заказу")
+
+                        //- end item
+
+
+                    .checkout__collaterals
+                        .collaterals
+                            .collaterals__title
+                                span Ваш заказ
+                            .collaterals__list
+                                .collaterals__item
+                                    .collaterals__label Ваш заказ
+                                    .collaterals__choice 1 товар
+                                .collaterals__item 
+                                    .collaterals__label Товары на сумму
+                                    .collaterals__choice 2000 руб
+                                .collaterals__item
+                                    .collaterals__label Скидка
+                                    .collaterals__choice.sell - 274 руб
+
+                            .collaterals__total
+
+                                span Итого
+
+                                bdi 1726  
+                                    span.woocommerce-Price-currencySymbol руб
+
+                            .collaterals__btn
+                                button.btn.btn_lg(href="#") Оплатить онлайн
+
+                            .collaterals__info Нажимая на кнопку вы соглашаетесь с <a href="#">условиями обработки персональных данных</a>, а также с <a href="#">условиями продажи</a>
+
+
+
+    // end checkout

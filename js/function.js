@@ -31,12 +31,11 @@ function isTouch() {
     return app.touchDevice();
 } // for touch device
 
-console.log('pathname: ', window.location.pathname);
-console.log('url: ', window.location.href);
-console.log('origin: ', window.location.origin);
+// console.log('pathname: ', window.location.pathname);
+// console.log('url: ', window.location.href);
+// console.log('origin: ', window.location.origin);
 
 window.onload = function () {
-    console.log('onload');
     function preloader() {
         $(()=>{
 
@@ -52,67 +51,18 @@ window.onload = function () {
         });
     }
     preloader();
-    // setTimeout( ()=> preloader(),15000 )
 }
 
 $(document).ready(function() {
-    console.log('ready');
-
-    window.addEventListener('resize', () => {
-        // Запрещаем выполнение скриптов при смене только высоты вьюпорта (фикс для скролла в IOS и Android >=v.5)
-        if (app.resized == screen.width) { return; }
-        app.resized = screen.width;
-        // console.log('resize');
-        // console.log(screen.width);
-        // checkOnResize();
-    });
-
-    // function checkOnResize() {
-    //     if (isLgWidth()) {
-    //         console.log('isLgWidth');
-    //     } else {
-    //         console.log('isLgWidth else');
-    //     }
-    //     // или создаем функцию
-    //     // test();
-    // }
-
-    // function test() {
-    //     if (isLgWidth()) {
-    //         console.log('isLgWidth');
-    //     } else {
-    //         console.log('isLgWidth else');
-    //     }
-    // }
-
-    // function scrollPage () {
-    //     $(".toTop").on("click","a", function (event) {
-    //         event.preventDefault();
-    //         let id  = $(this).attr('href');
-    //         let top = $(id).offset().top;
-    //         $('body,html').animate({scrollTop: top}, 1500);
-    //     });
-    //
-    //     $(window).scroll(function(){
-    //         if($(window).scrollTop()>500){
-    //             $('.toTop').fadeIn(900)
-    //         }else{
-    //             $('.toTop').fadeOut(700)
-    //         }
-    //     });
-    // }
-    // scrollPage();
 
     function showModal() {
         $('.show_modal_js').on('click', function (e) {
             e.preventDefault();
             let id  = $(this).attr('href');
-
             $(id).modal('show');
         });
 
         $('.modal').on('show.bs.modal', () => {
-            // let openedModal = $('.modal.in:not(.popapCalc)');
             let openedModal = $('.modal');
             if (openedModal.length > 0) {
                 openedModal.modal('hide');
@@ -141,7 +91,7 @@ $(document).ready(function() {
         // }
         // localStorage.clear();
     };
-    // showWaitModal();
+    showWaitModal();
 
     function doCatalogue() {
         $('.catalogue__btn').click(function(event) {
@@ -159,7 +109,6 @@ $(document).ready(function() {
 
         $(document).mouseup(function (e) {
             let div = $(".header");
-            // если клик был не по нашему блоку и не по его дочерним элементам
             if (!div.is(e.target) && div.has(e.target).length === 0) {
                 $('.catalogue__toggle').removeClass('active');
                 $('.catalogue__list').removeClass('active');
@@ -176,7 +125,6 @@ $(document).ready(function() {
 
         search_input.keyup(function () {
             let search_value = $(this).val();
-            // console.log(search_value);
 
             if (search_value.length > 2) { // кол-во символов
                 search_reset.addClass('active');
@@ -192,9 +140,6 @@ $(document).ready(function() {
     }
     resetSearch();
 
-
-
-
     function openMobileNav() {
         $('.header__toggle').click(function(event) {
             console.log('Показ меню');
@@ -207,40 +152,33 @@ $(document).ready(function() {
     };
     openMobileNav();
 
-    function showMore(classItem, btn) {
-        // let classItem = '.vacancies__item';
-        // let classItem = class;
-        let item = $(''+ classItem +'');
-        let count = item.length;
-        let start = 1;
-        let show = 1;
+    function changeDelivery() {
+        $('.delivery_method_js').on('change', function () {
+            let val = $(this).val();
 
-        item.addClass('d-none');
-        $('' + classItem + ':lt(' + start + ')').removeClass('d-none');
+            if (val == 'delivery') {
+                $('.delivery_js').fadeIn();
+                $('.pickup_js').hide();
 
-        $(btn).click(function(e) {
-            e.preventDefault();
-            $(this).addClass('loading');
+                let fields = $('.delivery_js').find('[type="text"]');
+                fields.each(function(index, el) {
+                    $(this).prop('required',true);
+                });
 
-            let load = $(this).data('load');
-            let more = $(this).data('more');
 
-            start = (start + show <= count) ? start + show : count;
+            } else {
+                $('.delivery_js').hide();
+                $('.pickup_js').fadeIn();
 
-            $(this).text(load);
+                let fields = $('.delivery_js').find('[type="text"]');
+                fields.each(function(index, el) {
+                    $(this).prop('required',false);
+                });
+            }
 
-            setTimeout(() => {
-                $(''+ classItem +':lt(' + start + ')').removeClass('d-none');
-                if ($(''+ classItem +':not(.d-none)').length == count) {
-                    $(this).parent().remove();
-                }
-                $(this).removeClass('loading');
-                $(this).text(more);
-            }, 500);
         });
-
     }
-    // showMore('.vacancies__item', '.show_more_v_js');
+    changeDelivery()
 
     function collapsed() {
         let toggle = $('[data-collapse]');
@@ -251,7 +189,6 @@ $(document).ready(function() {
             wrap = body.closest('[data-collapse-wrapper]');
 
             if (!id) {
-                // $('[data-collapse-wrapper]').removeClass('open');
                 body = $(this).parent().find('[data-collapse-body]');
                 $(this).toggleClass('open');
                 body.toggleClass('active');
@@ -261,13 +198,6 @@ $(document).ready(function() {
                     body.slideUp();
                 }
             }
-            // else if (id === 'all') {
-            //     body.slideDown(800);
-            //     toggle.addClass('open');
-            // } else {
-            //     body.slideToggle(800);
-            //     $(this).toggleClass('open');
-            // }
         });
     }
     collapsed();
@@ -283,15 +213,6 @@ $(document).ready(function() {
         });
     }
     doTabs();
-
-    function doDrop() {
-        $('.drop__toggle').on('click', function() {
-            // $('.drop__list').toggleClass('open');
-            $(this).toggleClass('active');
-            $(this).closest('.drop').find('.drop__list').toggleClass('open');
-        });
-    };
-    doDrop();
 
     function initSelect2 () {
         function addIcon(icon) {
@@ -312,27 +233,6 @@ $(document).ready(function() {
             templateSelection: addIcon,
         });
 
-        // $('.select').on('change',function() {
-        //     let val = $(this).val();
-        //     let form = $(this).closest('.form');
-        //     let phone = form.find('.form__row_phone_js');
-        //     let mail = form.find('.form__row_email_js');
-
-        //     if ( val == 'mail'){
-        //         mail.removeClass('form__row_hide');
-        //         mail.find('input').prop('required',true);
-
-        //         phone.addClass('form__row_hide');
-        //         phone.find('input').prop('required',false);
-
-        //     } else {
-        //         mail.addClass('form__row_hide');
-        //         mail.find('input').prop('required',false);
-
-        //         phone.removeClass('form__row_hide');
-        //         phone.find('input').prop('required',true);
-        //     }
-        // })
     }
     initSelect2();
 
@@ -340,202 +240,21 @@ $(document).ready(function() {
         $(".tel").mask("+375(999) 999 - 99 - 99");
     });
 
-    function initTwentytwenty () {
-        $(".twentytwenty-container").twentytwenty({
-            default_offset_pct: 0.42, // сколько показывать 'изображение до' в процентах (максимально 1) сразу после загрузки страницы
-            orientation: 'horizontal', // ориентация слайдера ('horizontal' или 'vertical')
-            before_label: 'До', // подпись 'до'
-            after_label: 'После', // подпись 'после'
-            no_overlay: true, // не показывать затемнение с надписями 'до' и 'после'
-            move_slider_on_hover: false, // двигать "бегунок" слайдера вместе с курсором мыши
-            move_with_handle_only: true, // двигать слайдер только за его "бегунок"
-            click_to_move: false // разрешить перемещение "бегунка" слайдера по клику на изображении
-        });
-    }
-    // initTwentytwenty(); добавить пример и стили
-
-
-
-    function addDataFancybox() {
-        let item = $('.itemForDataFancybox_js');
-        let num = 0;
-        item.each(function(index, el) {
-            $(this).find('a').attr('data-fancybox', num);
-            num++;
-        });
-    }
-    addDataFancybox();
-
-
-
-
-    // Stiky menu // Липкое меню. При прокрутке к элементу #header добавляется класс .stiky который и стилизуем
-    function stikyMenu() {
-        let HeaderTop = $( 'header' ).offset().top;
-        // let HeaderTop = $( 'header' ).offset().top + $( '.home' ).innerHeight();
-        let currentTop = $( window ).scrollTop();
-
-        setNavbarPosition();
-
-        $( window ).scroll( function () {
-            setNavbarPosition();
-        } );
-
-        function setNavbarPosition() {
-            currentTop = $( window ).scrollTop();
-
-            if ( currentTop > HeaderTop ) {
-                $( 'header' ).addClass( 'stiky' );
+    function addNameFile() {
+        $('input[type="file"]').change(function (e) {
+            let text = $(this).closest('label').attr('data-text');
+            if (typeof e.target.files[0] == 'undefined') {
+                let fileName = text;
+                $(this).parent().removeClass('active');
             } else {
-                $( 'header' ).removeClass( 'stiky' );
+                fileName = e.target.files[0].name;
+                $(this).parent().addClass('active');
+                fileName = fileName.substring(0, 20);
             }
-
-            // $( '.navbar__link' ).each( function () {
-            //     let section = $( this ).attr( 'href' );
-            //
-            //     if ( $( 'section' ).is( section ) ) {
-            //         let offset = $( section ).offset().top;
-            //
-            //         if ( offset <= currentTop && offset + $( section ).innerHeight() > currentTop ) {
-            //             $( this ).addClass( 'active' );
-            //         } else {
-            //             $( this ).removeClass( 'active' );
-            //         }
-            //     }
-            // } );
-        }
-    stikyMenu();
-
-    }
-
-    // Видео youtube для страницы
-    function uploadYoutubeVideo() {
-        if ( $( ".js-youtube" ) ) {
-
-            $( ".js-youtube" ).each( function () {
-                // Зная идентификатор видео на YouTube, легко можно найти его миниатюру
-                $( this ).css( 'background-image', 'url(http://i.ytimg.com/vi/' + this.id + '/sddefault.jpg)' );
-
-                // Добавляем иконку Play поверх миниатюры, чтобы было похоже на видеоплеер
-                $( this ).append( $( '<img src="../wp-content/themes/gymn/assets/img/play.png" alt="Play" class="video__play">' ) );
-
-            } );
-
-            $( '.video__play, .video__prev' ).on( 'click', function () {
-                // создаем iframe со включенной опцией autoplay
-                let wrapp = $( this ).closest( '.js-youtube' ),
-                    videoId = wrapp.attr( 'id' ),
-                    iframe_url = "https://www.youtube.com/embed/" + videoId + "?autoplay=1&autohide=1";
-
-                if ( $( this ).data( 'params' ) ) iframe_url += '&' + $( this ).data( 'params' );
-
-                // Высота и ширина iframe должны быть такими же, как и у родительского блока
-                let iframe = $( '<iframe/>', {
-                    'frameborder': '0',
-                    'src': iframe_url,
-                    'allow': "autoplay"
-                } )
-
-                // Заменяем миниатюру HTML5 плеером с YouTube
-                $( this ).closest( '.video__wrapper' ).append( iframe );
-
-            } );
-        }
-    };
-    // uploadYoutubeVideo();
-
-    function uploadYoutubeVideoForModal() {
-        if ( $( ".youtubeModal_js" ) ) {
-
-            $( '.youtubeModal_js' ).on( 'click', function () {
-                $('#modalVideo').modal('show');
-
-                let wrapp = $( this ).closest( '.youtubeModal_js' );
-                let videoId = wrapp.attr( 'id' );
-                let iframe_url = "https://www.youtube.com/embed/" + videoId + "?autoplay=1&autohide=1";
-
-                // доп параметры для видоса
-                // if ( $( this ).data( 'params' ) ) iframe_url += '&' + $( this ).data( 'params' );
-
-                // Высота и ширина iframe должны быть такими же, как и у родительского блока
-                let iframe = $( '<iframe/>', {
-                    'frameborder': '0',
-                    'src': iframe_url,
-                    'allow': "autoplay"
-                } )
-                $(".modalVideo__wraper").append(iframe);
-
-                $("#modalVideo").on('hide.bs.modal', function () {
-                    $(".modalVideo__wraper").html('');
-                });
-
-            } );
-        }
-    };
-    uploadYoutubeVideoForModal();
-
-
-    // start animate numbers
-    function onVisible( selector, callback, repeat = false ) {
-
-    let options = {
-        threshold: [ 0.5 ]
-    };
-    let observer = new IntersectionObserver( onEntry, options );
-    let elements = document.querySelectorAll( selector );
-
-    for ( let elm of elements ) {
-        observer.observe( elm );
-    }
-
-    function onEntry( entry ) {
-        entry.forEach( change => {
-            let elem = change.target;
-            // console.log(change);
-            // console.log(elem.innerHTML);
-            if ( change.isIntersecting ) {
-                if ( !elem.classList.contains( 'show' ) || repeat ) {
-                    elem.classList.add( 'show' );
-                    callback( elem );
-                }
-            }
-        } );
-    }
-    }
-
-    onVisible( '.programsInfo__number', function ( e ) {
-        animateNumber( e, e.innerHTML );
-    } );
-
-    function animateNumber( elem, final, duration = 1000 ) {
-        let start = 0;
-        // console.log('init');
-        setInterval( function () {
-            if ( final > start ) {
-                elem.innerHTML = start++;
-            }
-        }, duration / final );
-    }
-
-    function initAOS () {
-        // https://github.com/michalsnik/aos
-        AOS.init({
-            disable: 'mobile',
-            // anchorPlacement: 'bottom-bottom',
-            duration: 1000, // values from 0 to 3000, with step 50ms
-            // offset: 20,
-            once: true,
+            $(this).parent().find('p').text(fileName);
         });
-
-        AOS.init({
-            disable: function () {
-                var maxWidth = 768;
-                return window.innerWidth < maxWidth;
-            }
-        });
-
     }
-    initAOS ();
+    addNameFile();
 
 
     // --------------------------------------------------------------------
@@ -566,48 +285,4 @@ $(document).ready(function() {
     // --------------------------------------------------------------------
 
 
-
-    // --------------------------------------------------------------------
-    // <div class="form__row">
-    //     <label class="form__file_label" data-text="Файл не выбран">
-    //     <input type="file" required="required"/>
-    //     <p class="form__file">Загрузить файл</p>
-    //     </label>
-    // </div>
-
-    function addNameFile() {
-        $('input[type="file"]').change(function (e) {
-            // console.log('change');
-            var text = $(this).closest('label').attr('data-text');
-            // var container = $(this).closest('.tab-item');
-            if (typeof e.target.files[0] == 'undefined') {
-                var fileName = text;
-                $(this).parent().removeClass('active');
-            } else {
-                var fileName = e.target.files[0].name;
-                $(this).parent().addClass('active');
-                fileName = fileName.substring(0, 20);
-                // console.log(fileName);
-            }
-            $(this).parent().find('p').text(fileName);
-            // console.log(fileName);
-            // container.find('[controlBtn_JS]').removeClass('disabled');
-        });
-    }
-    addNameFile();
-    // --------------------------------------------------------------------
-
-
-    // function reloadPage () {
-    //     if (!localStorage.getItem("reload")) {
-    //         localStorage.setItem("reload", "true");
-    //         location.reload();
-    //     }
-    //     else {
-    //         localStorage.removeItem("reload");
-    //     }
-    // }
-
-
 })
-// end animate numbers
